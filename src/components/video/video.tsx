@@ -3,7 +3,7 @@ import {StyledVideo} from "./styled";
 
 function Video() {
     return (
-        <StyledVideo>
+        <StyledVideo className='group-video'>
             <section className="py-5 video">
                 <div className="container">
                     <div className='w-100 pb-4 text-center title'>Chuyện hay của ILA</div>

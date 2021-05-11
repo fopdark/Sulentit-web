@@ -1,16 +1,16 @@
 import React from "react";
 import {StyledNews} from "./styled";
 
-import news1 from '../../pictures/media_161763751877096-360x234.jpg';
-import news2 from '../../pictures/media_161763683441475-360x234.png';
-import news3 from '../../pictures/media_161522161321690-360x234.jpg';
-import news4 from '../../pictures/media_161363987431574-360x234.png';
-import news5 from '../../pictures/media_160160492748828-360x234.jpg';
-import news6 from '../../pictures/media_159074082852219-360x234.png';
+const news1 = process.env.PUBLIC_URL + '/pictures/media_161763751877096-360x234.jpg'
+const news2 = process.env.PUBLIC_URL + '/pictures/media_161763683441475-360x234.png'
+const news3 = process.env.PUBLIC_URL + '/pictures/media_161522161321690-360x234.jpg'
+const news4 = process.env.PUBLIC_URL + '/pictures/media_161363987431574-360x234.png'
+const news5 = process.env.PUBLIC_URL + '/pictures/media_160160492748828-360x234.jpg'
+const news6 = process.env.PUBLIC_URL + '/pictures/media_159074082852219-360x234.png'
 
 function News() {
     return (
-        <StyledNews>
+        <StyledNews className='group-news'>
             <section className="py-5 news">
                 <div className="container">
                     <div className="text-center my-2 font-weight-bold main-title">Tin tức</div>

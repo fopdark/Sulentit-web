@@ -1,117 +1,117 @@
 import React from 'react';
-import logo from '../../pictures/logo.png'
 import styled from 'styled-components';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import carousel1 from '../../pictures/media_155246671173845.jpg';
-import carousel2 from '../../pictures/media_155246680133527.jpg';
-import carousel3 from '../../pictures/media_155246681644305.jpg';
-import carousel4 from '../../pictures/media_155246741041767.jpg';
-import singlePicture from '../../pictures/web_banner_14Dec.jpg';
+const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
+const carousel1 = process.env.PUBLIC_URL + '/pictures/media_155246671173845.jpg'
+const carousel2 = process.env.PUBLIC_URL + '/pictures/media_155246680133527.jpg'
+const carousel3 = process.env.PUBLIC_URL + '/pictures/media_155246681644305.jpg'
+const carousel4 = process.env.PUBLIC_URL + '/pictures/media_155246741041767.jpg'
+const singlePicture = process.env.PUBLIC_URL + '/pictures/web_banner_14Dec.jpg'
 
 const StyledHeader = styled.div`
-@media screen and (max-width: 991px){
-   .carousel{
-      img{
-          height: 90vh;
-          object-fit: cover;
-      }
-   }
-   .group-dropdown{
-      text-wrap: normal;
-      bottom: -140px;
-      width: 90%;
-   }
-   .img{
-      padding: 160px 0px;
-   }
-}
-@media screen and (min-width: 992px){
-    .img{
-      padding: 70px 0px;
-   }
-    .group-dropdown{
-       bottom: -50px;
-       width: 100%;
-   }
-   .group-navTab{
-        position: absolute;
-   }
-}
-section.header {
-  .group-navTab{
-      top: 0;
-      z-index: 1;
-  }
-  img {
-      
-  }
-  div.group-tab {
-  div.tab {
-      color: #fff;
-  }
-  div.language {
-
-  }
-  div.contact {
-      div{
-          color: #fff;
-          background-color: #45c0f8;
-          border-radius: 50px;
-      }
-  }
-  div.navTab {
-       span {
-    
-       }
-  }
-}
-  div.carousel {
-      background-color: #000;
-      img{
-          opacity: 0.5;
-      };
-  }
-  div.title {
-  }
-  div.group-dropdown {
-    background-color: #45c0f8;
-    border-radius: 10px;
-    z-index: 1;
-    color: #fff;
-    font-size: 1.4em;
-    div.dropdown_title {
-
-    }
-    div.dropdown_content {
-      div {
-
-      }
-
-      div.dropdown {
-        button{
-           width: 150px;
-           :after{
-           }
-        }
-      }
-      button.info {
-        border: none;
-        border-radius: 20px;
-        padding-left: 0.4em;
-        padding-right: 0.4em;
-        font-size: 0.7em;
-        color: #45c0f8;
-      }
-    }
-  }
-  .img{
-      
-      background-color: #f0f2f5;
-  }
-}
+// @media screen and (max-width: 991px){
+//    .carousel{
+//       img{
+//           height: 90vh;
+//           object-fit: cover;
+//       }
+//    }
+//    .group-dropdown{
+//       text-wrap: normal;
+//       bottom: -140px;
+//       width: 90%;
+//    }
+//    .img{
+//       padding: 160px 0px;
+//    }
+// }
+// @media screen and (min-width: 992px){
+//     .img{
+//       padding: 70px 0px;
+//    }
+//     .group-dropdown{
+//        bottom: -50px;
+//        width: 100%;
+//    }
+//    .group-navTab{
+//         position: absolute;
+//    }
+// }
+// section.header {
+//   .group-navTab{
+//       top: 0;
+//       z-index: 1;
+//   }
+//   img {
+//
+//   }
+//   div.group-tab {
+//   div.tab {
+//       color: #fff;
+//   }
+//   div.language {
+//
+//   }
+//   div.contact {
+//       div{
+//           color: #fff;
+//           background-color: #45c0f8;
+//           border-radius: 50px;
+//       }
+//   }
+//   div.navTab {
+//        span {
+//
+//        }
+//   }
+// }
+//   div.carousel {
+//       background-color: #000;
+//       img{
+//           opacity: 0.5;
+//       };
+//   }
+//   div.title {
+//   }
+//   div.group-dropdown {
+//     background-color: #45c0f8;
+//     border-radius: 10px;
+//     z-index: 1;
+//     color: #fff;
+//     font-size: 1.4em;
+//     div.dropdown_title {
+//
+//     }
+//     div.dropdown_content {
+//       div {
+//
+//       }
+//
+//       div.dropdown {
+//         button{
+//            width: 150px;
+//            :after{
+//            }
+//         }
+//       }
+//       button.info {
+//         border: none;
+//         border-radius: 20px;
+//         padding-left: 0.4em;
+//         padding-right: 0.4em;
+//         font-size: 0.7em;
+//         color: #45c0f8;
+//       }
+//     }
+//   }
+//   .img{
+//
+//       background-color: #f0f2f5;
+//   }
+// }
 `
 const settings = {
     dots: false,
@@ -126,7 +126,7 @@ const settings = {
 
 function Header() {
     return (
-        <StyledHeader>
+        <StyledHeader className='group-header'>
             <section className="position-relative header">
                 <div className='w-100 group-navTab'>
                     <div className="px-4 row">
@@ -177,12 +177,75 @@ function Header() {
                                     </div>
                                 
                                 </div>
-                                <div className="navTab">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                <div className="d-flex py-4 my-2 navTab">
+                                    <p className='d-flex align-items-center flex-column d-inline'>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </p>
                                 </div>
                             </div>
+                        </div>
+                        <div className='p-4 bg-light slider-bar'>
+                            <div className='m-2 p-2 bg-blue login'>
+                                <div className='text-light mb-3 font-18 font-weight-bold text-uppercase'>
+                                    đăng nhập vào ila
+                                </div>
+                                <a href="">
+                                    <div className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
+                                        tôi là phụ huynh
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
+                                        tôi là học viên
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    ILA ELITE
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    CÁC GIẢI THƯỞNG
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    TIN TỨC ILA
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    SỰ KIỆN ILA
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    CHUYỆN HAY CỦA ILA
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    GIỚI THIỆU ILA
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    TẠI SAO NÊN CHỌN ILA
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                    LIÊN HỆ
+                                </div>
+                            </a>
+                            <button
+                                className='bg-blue border-0 px-5 py-2 text-uppercase text-light font-weight-bold font-16 form'>
+                                đăng ký
+                            </button>
                         </div>
                     </div>
                 </div>

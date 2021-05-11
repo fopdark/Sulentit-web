@@ -3,7 +3,7 @@ import {StyledNumber} from "./styled";
 
 function Number() {
     return (
-        <StyledNumber>
+        <StyledNumber className='group-number'>
             <section className="py-5 number">
                 <div className="container">
                     <div className="text-uppercase font-weight-bold text-center number_title">

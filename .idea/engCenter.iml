@@ -8,10 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="bootstrap" level="application" />
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="style component" level="application" />
-    <orderEntry type="library" name="typescript" level="application" />
     <orderEntry type="library" name="twitter-bootstrap" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>

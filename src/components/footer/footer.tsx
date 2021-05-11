@@ -1,11 +1,12 @@
 import React from "react";
 import {StyledFooter} from "./styled";
-import logo from '../../pictures/logo.png';
 import map from '../../pictures/map-screenshot.png'
+
+const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
 
 function Footer() {
     return (
-        <StyledFooter>
+        <StyledFooter className='group-footer'>
             <section className="py-5 footer">
                 <div className="container">
                     <div className="row">

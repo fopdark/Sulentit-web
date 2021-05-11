@@ -1,12 +1,12 @@
 import React from "react";
 import {StyledProgram} from "./styled";
 
-import picture1 from '../../pictures/media_149268653336845.jpg';
-import picture2 from '../../pictures/media_149268565791175.jpg';
-import picture3 from '../../pictures/media_149268631320236.jpg';
-import picture4 from '../../pictures/media_149268636724154.jpg';
-import picture5 from '../../pictures/media_149268642337324.jpg';
-import pathway from '../../pictures/Ila_Study_pathway-update1008.png';
+const picture1 = process.env.PUBLIC_URL + '/pictures/media_149268653336845.jpg'
+const picture2 = process.env.PUBLIC_URL + '/pictures/media_149268565791175.jpg'
+const picture3 = process.env.PUBLIC_URL + '/pictures/media_149268631320236.jpg'
+const picture4 = process.env.PUBLIC_URL + '/pictures/media_149268636724154.jpg'
+const picture5 = process.env.PUBLIC_URL + '/pictures/media_149268642337324.jpg'
+const pathway = process.env.PUBLIC_URL + '/pictures/Ila_Study_pathway-update1008.png'
 
 function Program() {
     return (
