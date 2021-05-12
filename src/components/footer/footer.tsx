@@ -1,8 +1,8 @@
 import React from "react";
 import {StyledFooter} from "./styled";
-import map from '../../pictures/map-screenshot.png'
 
 const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
+const map = process.env.PUBLIC_URL + '/pictures/map-screenshot.png'
 
 function Footer() {
     return (

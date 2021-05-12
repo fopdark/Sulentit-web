@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,108 +11,7 @@ const carousel3 = process.env.PUBLIC_URL + '/pictures/media_155246681644305.jpg'
 const carousel4 = process.env.PUBLIC_URL + '/pictures/media_155246741041767.jpg'
 const singlePicture = process.env.PUBLIC_URL + '/pictures/web_banner_14Dec.jpg'
 
-const StyledHeader = styled.div`
-// @media screen and (max-width: 991px){
-//    .carousel{
-//       img{
-//           height: 90vh;
-//           object-fit: cover;
-//       }
-//    }
-//    .group-dropdown{
-//       text-wrap: normal;
-//       bottom: -140px;
-//       width: 90%;
-//    }
-//    .img{
-//       padding: 160px 0px;
-//    }
-// }
-// @media screen and (min-width: 992px){
-//     .img{
-//       padding: 70px 0px;
-//    }
-//     .group-dropdown{
-//        bottom: -50px;
-//        width: 100%;
-//    }
-//    .group-navTab{
-//         position: absolute;
-//    }
-// }
-// section.header {
-//   .group-navTab{
-//       top: 0;
-//       z-index: 1;
-//   }
-//   img {
-//
-//   }
-//   div.group-tab {
-//   div.tab {
-//       color: #fff;
-//   }
-//   div.language {
-//
-//   }
-//   div.contact {
-//       div{
-//           color: #fff;
-//           background-color: #45c0f8;
-//           border-radius: 50px;
-//       }
-//   }
-//   div.navTab {
-//        span {
-//
-//        }
-//   }
-// }
-//   div.carousel {
-//       background-color: #000;
-//       img{
-//           opacity: 0.5;
-//       };
-//   }
-//   div.title {
-//   }
-//   div.group-dropdown {
-//     background-color: #45c0f8;
-//     border-radius: 10px;
-//     z-index: 1;
-//     color: #fff;
-//     font-size: 1.4em;
-//     div.dropdown_title {
-//
-//     }
-//     div.dropdown_content {
-//       div {
-//
-//       }
-//
-//       div.dropdown {
-//         button{
-//            width: 150px;
-//            :after{
-//            }
-//         }
-//       }
-//       button.info {
-//         border: none;
-//         border-radius: 20px;
-//         padding-left: 0.4em;
-//         padding-right: 0.4em;
-//         font-size: 0.7em;
-//         color: #45c0f8;
-//       }
-//     }
-//   }
-//   .img{
-//
-//       background-color: #f0f2f5;
-//   }
-// }
-`
+
 const settings = {
     dots: false,
     infinite: true,
@@ -124,9 +23,19 @@ const settings = {
     autoplay: true,
 };
 
+
 function Header() {
+    const [showSliderBar, changeShowSliderBar] = useState(false)
+
+    function fClickSliderBarShow() {
+        changeShowSliderBar(true)
+    }
+    function fClickSliderBarHide() {
+        changeShowSliderBar(false)
+    }
+
     return (
-        <StyledHeader className='group-header'>
+        <div className='group-header'>
             <section className="position-relative header">
                 <div className='w-100 group-navTab'>
                     <div className="px-4 row">
@@ -138,12 +47,24 @@ function Header() {
                         </div>
                         <div className="col d-flex justify-content-end">
                             <div className="d-flex justify-content-end px-md-5 group-tab">
-                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">Beyond english</div>
-                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">các khóa học</div>
-                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">trung tâm đào tạo
+                                <div
+                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">Beyond
+                                    english
                                 </div>
-                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">lịch học</div>
-                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">cơ hội nghề nghiệp
+                                <div
+                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">các
+                                    khóa học
+                                </div>
+                                <div
+                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">trung
+                                    tâm đào tạo
+                                </div>
+                                <div
+                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">lịch
+                                    học
+                                </div>
+                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">cơ
+                                    hội nghề nghiệp
                                 </div>
                                 <div className="mr-3 my-2 py-4 font-weight-bold text-uppercase language">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -175,77 +96,86 @@ function Header() {
                                     <div className='px-3 py-2 text-center'>
                                         liên hệ
                                     </div>
-                                
+
                                 </div>
-                                <div className="d-flex py-4 my-2 navTab">
-                                    <p className='d-flex align-items-center flex-column d-inline'>
+                                <div onClick={fClickSliderBarShow} className="d-flex py-4 my-2 navTab">
+                                    <a href='#' className='d-flex align-items-center flex-column d-inline'>
                                         <div></div>
                                         <div></div>
                                         <div></div>
-                                    </p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div className='p-4 bg-light slider-bar'>
-                            <div className='m-2 p-2 bg-blue login'>
-                                <div className='text-light mb-3 font-18 font-weight-bold text-uppercase'>
-                                    đăng nhập vào ila
+                        <div className={showSliderBar ? 'd-block' : 'd-none'}>
+                            <div className='p-4 bg-light position-fixed slider-bar'>
+                                <div className='position-relative'>
+                                    <div className='m-2 p-2 bg-blue login'>
+                                        <div className='text-light mb-3 font-18 font-weight-bold text-uppercase'>
+                                            đăng nhập vào ila
+                                        </div>
+                                        <a href="">
+                                            <div
+                                                className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
+                                                tôi là phụ huynh
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div
+                                                className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
+                                                tôi là học viên
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div onClick={fClickSliderBarHide} className='font-weight-bold position-absolute button-X'>
+                                        X
+                                    </div>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            ILA ELITE
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            CÁC GIẢI THƯỞNG
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            TIN TỨC ILA
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            SỰ KIỆN ILA
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            CHUYỆN HAY CỦA ILA
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            GIỚI THIỆU ILA
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            TẠI SAO NÊN CHỌN ILA
+                                        </div>
+                                    </a>
+                                    <a href="">
+                                        <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                                            LIÊN HỆ
+                                        </div>
+                                    </a>
+                                    <button
+                                        className='bg-blue border-0 px-5 py-2 text-uppercase text-light font-weight-bold font-16 form'>
+                                        đăng ký
+                                    </button>
                                 </div>
-                                <a href="">
-                                    <div className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
-                                        tôi là phụ huynh
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
-                                        tôi là học viên
-                                    </div>
-                                </a>
                             </div>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    ILA ELITE
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    CÁC GIẢI THƯỞNG
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    TIN TỨC ILA
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    SỰ KIỆN ILA
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    CHUYỆN HAY CỦA ILA
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    GIỚI THIỆU ILA
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    TẠI SAO NÊN CHỌN ILA
-                                </div>
-                            </a>
-                            <a href="">
-                                <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
-                                    LIÊN HỆ
-                                </div>
-                            </a>
-                            <button
-                                className='bg-blue border-0 px-5 py-2 text-uppercase text-light font-weight-bold font-16 form'>
-                                đăng ký
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -259,7 +189,8 @@ function Header() {
                 </div>
                 <div className="position-relative d-flex justify-content-center container">
                     <div className=" position-absolute group-dropdown">
-                        <div className="p-2 text-center dropdown_title">Xây dựng lộ trình học dành riêng cho con bạn</div>
+                        <div className="p-2 text-center dropdown_title">Xây dựng lộ trình học dành riêng cho con bạn
+                        </div>
                         <div className="row p-3 dropdown_content">
                             <div className='col-auto d-flex'>
                                 <div className='d-none d-md-block py-1 mr-2'>Con tôi</div>
@@ -317,7 +248,7 @@ function Header() {
                     <div className='d-flex justify-content-center container'><img src={singlePicture} alt=""/></div>
                 </div>
             </section>
-        </StyledHeader>
+        </div>
     )
 }
 

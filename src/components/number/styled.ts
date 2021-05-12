@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import Background from '../../pictures/media_149268683648236.jpg'
 
 export const StyledNumber= styled.div`
-   // background-image: url(${Background});
+
    // color: #fff;
    // section.number {
    //    .bg-number{

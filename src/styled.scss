@@ -1,4 +1,4 @@
-
+//@import backgroundNumber from '/pictures/media_149268683648236.jpg'
 .group-header {
     @media screen and (max-width: 991px) {
         .carousel {
@@ -30,9 +30,21 @@
         }
     }
     .group-navTab{
-      top: 0;
-      z-index: 1;
-  }
+        top: 0;
+        z-index: 1;
+    }
+    .slider-bar{
+        right: 0;
+        top: 0;
+        z-index: 999;
+        .button-X{
+            top: -30px;
+            right: 0px;
+            border: 2px solid #000000;
+            padding: 2px 7px;
+            cursor: pointer;
+        }
+    }
   img {
   }
   div.group-tab {
@@ -71,7 +83,7 @@
     background-color: #45c0f8;
     border-radius: 10px;
     bottom: -50px;
-    z-index: 1;
+    z-index: 0;
     color: #fff;
     font-size: 1.4em;
     div.dropdown_title {
@@ -194,7 +206,7 @@ section.program {
 }
 
 .group-number {
-    background-image: url('pictures/media_149268683648236.jpg');
+    //background-image: url("pictures/media_149268683648236.jpg");
     color: #fff;
 
     section.number {
@@ -353,11 +365,7 @@ section.header {
     div.title {
     }
     div.group-dropdown {
-        background-color: #45c0f8;
-        border-radius: 10px;
-        z-index: 1;
-        color: #fff;
-        font-size: 1.4em;
+
         div.dropdown_title {
 
         }
