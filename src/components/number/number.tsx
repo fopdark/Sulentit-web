@@ -1,9 +1,10 @@
 import React from "react";
 import {StyledNumber} from "./styled";
 
+const backgroundImg = process.env.PUBLIC_URL + '/pictures/media_149268683648236.jpg'
 function Number() {
     return (
-        <StyledNumber className='group-number'>
+        <StyledNumber style={{backgroundImage: `url(${backgroundImg})`}} className='group-number'>
             <section className="py-5 number">
                 <div className="container">
                     <div className="text-uppercase font-weight-bold text-center number_title">
