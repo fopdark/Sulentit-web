@@ -448,3 +448,19 @@ section.header {
         background-color: #f0f2f5;
     }
 }
+
+.fadeInDown {
+    animation: fadeInDown 0.8s ease-in both;
+}
+
+@keyframes fadeInDown {
+    from {
+        -webkit-transform: translate3d(0, -70%, 0);
+        transform: translate3d(0, -70%, 0);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}

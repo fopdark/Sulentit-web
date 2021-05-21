@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,6 +27,21 @@ const settings = {
 
 function Header() {
     const [showSliderBar, changeShowSliderBar] = useState(false)
+    useEffect(() => {
+        let a: Element | null = document.querySelector('.icon-ila')
+        a?.classList.remove('square-transition');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    a?.classList.add('fadeInDown');
+                    return;
+                }
+
+                a?.classList.remove('fadeInDown');
+            });
+        });
+        observer.observe(document.querySelector('.group-icon') as Element);
+    }, [])
 
     function fClickSliderBarShow() {
         changeShowSliderBar(true)
