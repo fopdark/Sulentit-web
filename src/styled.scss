@@ -330,6 +330,30 @@ div.group-news {
         }
     }
 }
+.drop-down-cover{
+    width: 250px;
+    left: -60%;
+    display: none   ;
+}
+.group-tab2:hover{
+    .drop-down-cover{
+        display: block;
+    }
+}
+div.drop-down{
+    max-width: 250px;
+    .drop-down__cover {
+        background-color: white;
+        padding: 1rem;
+        max-width: 250px;
+
+        li {
+            padding: 10px;
+            list-style-type: none;
+            max-width: 250px;
+        }
+}
+}
 
 div.group-footer {
     background-color: #2F2F2F;

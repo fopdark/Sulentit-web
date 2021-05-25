@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import DropDown from "../dropDownTabBar/dropDownTabBar";
+
 const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
 const carousel1 = process.env.PUBLIC_URL + '/pictures/media_155246671173845.jpg'
 const carousel2 = process.env.PUBLIC_URL + '/pictures/media_155246680133527.jpg'
@@ -186,14 +188,28 @@ function Header() {
                         </div>
                         <div className="col d-flex justify-content-end">
                             <div className="d-flex justify-content-end px-md-5 group-tab">
-                                <div
-                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">Beyond
-                                    english
+                                <div className='position-relative group-tab2'>
+                                    <div
+                                        className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">Beyond
+                                        english
+                                    </div>
+                                    <div className='position-absolute drop-down-cover'>
+                                        <DropDown
+                                            lists={['Phương pháp học tư duy thế kỷ 21', 'Môi trường học thế kỷ 21', 'Nguồn cảm hứng tư duy thế kỷ 21']}></DropDown>
+                                    </div>
+
                                 </div>
-                                <div
-                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">các
-                                    khóa học
+                                <div className='position-relative group-tab2'>
+                                    <div
+                                        className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">các
+                                        khóa học
+                                    </div>
+                                    <div className='position-absolute drop-down-cover'>
+                                        <DropDown
+                                            lists={['Tiếng Anh Trẻ em & Thanh Thiếu Niên', 'Tiếng Anh Người lớn', 'Tiếng Anh Dành cho Doanh nghiệp', 'ILA Maths', 'ILA Du học', 'Du học hè 2020']}></DropDown>
+                                    </div>
                                 </div>
+
                                 <div
                                     className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">trung
                                     tâm đào tạo
@@ -202,8 +218,14 @@ function Header() {
                                     className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">lịch
                                     học
                                 </div>
-                                <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">cơ
-                                    hội nghề nghiệp
+                                <div className='position-relative group-tab2'>
+                                    <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">cơ
+                                        hội nghề nghiệp
+                                    </div>
+                                    <div className='position-absolute drop-down-cover'>
+                                        <DropDown
+                                            lists={['Tuyển dụng Giáo viên nước ngoài và các vị trí Quản lý giáo vụ', 'Tuyển dụng nhân viên']}></DropDown>
+                                    </div>
                                 </div>
                                 <div
                                     className="mr-3 d-none d-lg-block my-2 py-4 font-weight-bold text-uppercase language">
