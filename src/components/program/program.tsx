@@ -22,17 +22,17 @@ function Program() {
                     </div>
                     <div className="group-image"></div>
                     <div className="p-2 row">
-                        <div className="position-relative my-2 col-md-4 col-12 class"><img className='w-100 image' src={picture1} alt=""/>
+                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture1} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content">
+                                    <div className="img-content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
                                 </div>
-                                <div className="row">
+                                <div className="row d-none d-lg-block">
                                     <div className="col-6">
                                         <div
                                             className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
@@ -76,20 +76,20 @@ function Program() {
                                         </div>
                                     </div>
                                 </div>
-                                <div><button className="img-button">đăng ký ngay</button></div>
+                                <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div className="position-relative my-2 col-md-4 col-12 class"><img className='w-100 image' src={picture2} alt=""/>
+                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture2} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content">
+                                    <div className="img-content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
                                 </div>
-                                <div className="row">
+                                <div className="row d-none d-lg-block">
                                     <div className="col-6">
                                         <div
                                             className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
@@ -133,20 +133,20 @@ function Program() {
                                         </div>
                                     </div>
                                 </div>
-                                <div><button className="img-button">đăng ký ngay</button></div>
+                                <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div className="position-relative my-2 col-md-4 col-12 class"><img className='w-100 image' src={picture3} alt=""/>
+                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture3} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content">
+                                    <div className="img-content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
                                 </div>
-                                <div className="row">
+                                <div className="row d-none d-lg-block">
                                     <div className="col-6">
                                         <div
                                             className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
@@ -190,22 +190,22 @@ function Program() {
                                         </div>
                                     </div>
                                 </div>
-                                <div><button className="img-button">đăng ký ngay</button></div>
+                                <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
                     </div>
                     <div className="p-2 row">
-                        <div className="position-relative my-2 col-md-8 col-12 class"><img className='w-100 image' src={picture4} alt=""/>
+                        <div className="position-relative my-2 col-lg-8 col-12 class"><img className='w-100 image' src={picture4} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content">
+                                    <div className="img-content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
                                 </div>
-                                <div className="row">
+                                <div className="row d-none d-lg-block">
                                     <div className="col-6">
                                         <div
                                             className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
@@ -249,20 +249,20 @@ function Program() {
                                         </div>
                                     </div>
                                 </div>
-                                <div><button className="img-button">đăng ký ngay</button></div>
+                                <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div className="position-relative my-2 col-md-4 col-12 class"><img className='w-100 image' src={picture5} alt=""/>
+                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture5} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content">
+                                    <div className="img-content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
                                 </div>
-                                <div className="row">
+                                <div className="row d-none d-lg-block">
                                     <div className="col-6">
                                         <div
                                             className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
@@ -306,7 +306,7 @@ function Program() {
                                         </div>
                                     </div>
                                 </div>
-                                <div><button className="img-button">đăng ký ngay</button></div>
+                                <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
                     </div>

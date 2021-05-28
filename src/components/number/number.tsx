@@ -21,7 +21,7 @@ function Number() {
                     </div>
                     <div className="py-5 row">
                         <div className="col-12 col-md my-2">
-                            <div className='position-relative'>
+                            <div className='position-relative group-number2'>
                                 <div className='w-100 bg-number bn1'></div>
                                 <div className='position-absolute d-flex justify-content-center flex-column align-items-center text'>
                                     <h4 className="text-center number">700</h4>
@@ -30,7 +30,7 @@ function Number() {
                             </div>
                         </div>
                         <div className="col-12 col-md my-2">
-                            <div className='position-relative'>
+                            <div className='position-relative group-number2'>
                                 <div className='w-100 bg-number bn2'></div>
                                 <div className='position-absolute d-flex justify-content-center flex-column align-items-center text'>
                                     <h4 className="text-center number">27.000</h4>
@@ -39,7 +39,7 @@ function Number() {
                             </div>
                         </div>
                         <div className="col-12 col-md my-2">
-                            <div className='position-relative'>
+                            <div className='position-relative group-number2'>
                                 <div className='w-100 bg-number bn3'></div>
                                 <div className='position-absolute d-flex justify-content-center flex-column align-items-center text'>
                                     <h4 className="text-center number">20</h4>
@@ -48,7 +48,7 @@ function Number() {
                             </div>
                         </div>
                         <div className="col-12 col-md my-2">
-                            <div className='position-relative'>
+                            <div className='position-relative group-number2'>
                                 <div className='w-100 bg-number bn4'></div>
                                 <div className='position-absolute d-flex justify-content-center flex-column align-items-center text'>
                                     <h4 className="text-center number">43</h4>
@@ -57,7 +57,7 @@ function Number() {
                             </div>
                         </div>
                         <div className="col-12 col-md my-2">
-                            <div className='position-relative'>
+                            <div className='position-relative group-number2'>
                                 <div className='w-100 bg-number bn5'></div>
                                 <div className='position-absolute d-flex justify-content-center flex-column align-items-center text'>
                                     <h4 className="text-center number">1.000.000</h4>

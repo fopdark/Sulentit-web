@@ -390,8 +390,8 @@ function Header() {
                         </div>
                         <div className="row p-3 dropdown_content">
                             <div className='col-auto d-flex'>
-                                <div className='d-none d-md-block py-1 mr-2'>Con tôi</div>
-                                <div className="d-none d-md-block dropdown mr-2">
+                                <div className='d-none d-lg-block py-1 mr-2'>Con tôi</div>
+                                <div className="d-none d-lg-block dropdown mr-2">
                                     <div className="btn-group">
                                         <button type="button"
                                                 className="d-flex justify-content-between align-items-center px-2 py-1 btn btn-info dropdown-toggle"
@@ -406,8 +406,8 @@ function Header() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='d-none d-md-block py-1 mr-2'>tuổi. Trình độ hiện nay</div>
-                                <div className="d-none d-md-block dropdown mr-2">
+                                <div className='d-none d-lg-block py-1 mr-2'>tuổi. Trình độ hiện nay</div>
+                                <div className="d-none d-lg-block dropdown mr-2">
                                     <button type="button"
                                             className="d-flex justify-content-between align-items-center px-2 py-1 btn btn-info dropdown-toggle"
                                             data-toggle="dropdown"
@@ -420,8 +420,8 @@ function Header() {
                                         <a className="dropdown-item" href="/">C</a>
                                     </div>
                                 </div>
-                                <div className='d-none d-md-block py-1 mr-2'>ước mơ đạt được</div>
-                                <div className="d-none d-md-block dropdown">
+                                <div className='d-none d-lg-block py-1 mr-2'>ước mơ đạt được</div>
+                                <div className="d-none d-lg-block dropdown">
                                     <button type="button"
                                             className="d-flex justify-content-between align-items-center px-2 py-1 btn btn-info dropdown-toggle"
                                             data-toggle="dropdown"
@@ -435,7 +435,7 @@ function Header() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='d-flex justify-content-center col-auto'>
+                            <div className='d-flex w-100 justify-content-center col-auto'>
                                 <button className='text-uppercase p-2 px-3 info'>tìm hiểu thêm</button>
                             </div>
                         </div>
