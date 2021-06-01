@@ -16,7 +16,7 @@ function News() {
                     <div className="text-center my-2 font-weight-bold main-title">Tin tức</div>
                     <div className="row">
                         <div className="col-md-4 col-12">
-                            <div className="mb-5 group-img"><img className='w-100' src={news1} alt=""/>
+                            <div data-aos='fade-up' className="mb-5 group-img"><img className='w-100' src={news1} alt=""/>
                                 <div className='px-4 py-4'>
                                     <div className="py-2 text-uppercase font-weight-bold title">HỌC SINH ILA GÂY ẤN TƯỢNG KHI TRỞ THÀNH NHÀ ĐẦU TƯ TRIỆU
                                         USD
@@ -34,7 +34,7 @@ function News() {
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="mb-5 group-img"><img className='w-100' src={news2} alt=""/>
+                            <div data-aos='fade-up' className="mb-5 group-img"><img className='w-100' src={news2} alt=""/>
                                 <div className='px-4 py-4'>
                                     <div className="py-2 text-uppercase font-weight-bold title">HỌC SINH ILA GÂY ẤN TƯỢNG KHI TRỞ THÀNH NHÀ ĐẦU TƯ TRIỆU
                                         USD
@@ -52,7 +52,7 @@ function News() {
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="mb-5 group-img"><img className='w-100' src={news3} alt=""/>
+                            <div data-aos='fade-up' className="mb-5 group-img"><img className='w-100' src={news3} alt=""/>
                                 <div className='px-4 py-4'>
                                     <div className="py-2 text-uppercase font-weight-bold title">HỌC SINH ILA GÂY ẤN TƯỢNG KHI TRỞ THÀNH NHÀ ĐẦU TƯ TRIỆU
                                         USD
@@ -70,7 +70,7 @@ function News() {
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="mb-5 group-img"><img className='w-100' src={news4} alt=""/>
+                            <div data-aos='fade-up' className="mb-5 group-img"><img className='w-100' src={news4} alt=""/>
                                 <div className='px-4 py-4'>
                                     <div className="py-2 text-uppercase font-weight-bold title">HỌC SINH ILA GÂY ẤN TƯỢNG KHI TRỞ THÀNH NHÀ ĐẦU TƯ TRIỆU
                                         USD
@@ -88,7 +88,7 @@ function News() {
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="mb-5 group-img"><img className='w-100' src={news5} alt=""/>
+                            <div data-aos='fade-up' className="mb-5 group-img"><img className='w-100' src={news5} alt=""/>
                                 <div className='px-4 py-4'>
                                     <div className="py-2 text-uppercase font-weight-bold title">HỌC SINH ILA GÂY ẤN TƯỢNG KHI TRỞ THÀNH NHÀ ĐẦU TƯ TRIỆU
                                         USD
@@ -106,7 +106,7 @@ function News() {
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="mb-5 group-img"><img className='w-100' src={news6} alt=""/>
+                            <div data-aos='fade-up' className="mb-5 group-img"><img className='w-100' src={news6} alt=""/>
                                 <div className='px-4 py-4'>
                                     <div className="py-2 text-uppercase font-weight-bold title">HỌC SINH ILA GÂY ẤN TƯỢNG KHI TRỞ THÀNH NHÀ ĐẦU TƯ TRIỆU
                                         USD

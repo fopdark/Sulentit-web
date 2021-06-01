@@ -22,7 +22,7 @@ function Program() {
                     </div>
                     <div className="group-image"></div>
                     <div className="p-2 row">
-                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture1} alt=""/>
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture1} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
@@ -79,7 +79,7 @@ function Program() {
                                 <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture2} alt=""/>
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture2} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
@@ -136,7 +136,7 @@ function Program() {
                                 <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture3} alt=""/>
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture3} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
@@ -195,7 +195,7 @@ function Program() {
                         </div>
                     </div>
                     <div className="p-2 row">
-                        <div className="position-relative my-2 col-lg-8 col-12 class"><img className='w-100 image' src={picture4} alt=""/>
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-8 col-12 class"><img className='w-100 image' src={picture4} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
@@ -252,7 +252,7 @@ function Program() {
                                 <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture5} alt=""/>
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture5} alt=""/>
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
                                     <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
@@ -313,7 +313,7 @@ function Program() {
                 </div>
                 <div className="container">
                     <div className="my-5 text-center pathway font-weight-bold">ILA Study Pathway</div>
-                    <div className='w-100 d-flex justify-content-center'><img className='w-100' src={pathway} alt=""/></div>
+                    <div  data-aos='fade-up' className='w-100 d-flex justify-content-center'><img className='w-100' src={pathway} alt=""/></div>
                 </div>
             </section>
         </StyledProgram>

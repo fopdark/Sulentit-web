@@ -385,7 +385,7 @@ function Header() {
                     </Slider>
                 </div>
                 <div className="position-relative d-flex justify-content-center container">
-                    <div className=" position-absolute group-dropdown">
+                    <div className="group-dropdown">
                         <div className="p-2 text-center dropdown_title">Xây dựng lộ trình học dành riêng cho con bạn
                         </div>
                         <div className="row p-3 dropdown_content">
@@ -435,7 +435,7 @@ function Header() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='d-flex w-100 justify-content-center col-auto'>
+                            <div className='d-flex w-100 pt-3 justify-content-center col-auto'>
                                 <button className='text-uppercase p-2 px-3 info'>tìm hiểu thêm</button>
                             </div>
                         </div>
