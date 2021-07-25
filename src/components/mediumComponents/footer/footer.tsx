@@ -1,5 +1,5 @@
 import React from "react";
-import {StyledFooter} from "./styled";
+import { StyledFooter } from "./styled";
 
 const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
 const map = process.env.PUBLIC_URL + '/pictures/map-screenshot.png'
@@ -12,7 +12,7 @@ function Footer() {
                     <div className="row">
                         <div className="d-none d-md-block col-2">
                             <div className="info">
-                                <img className='w-75' src={logo} alt=""/>
+                                <img className='w-75' src={logo} alt="" />
                             </div>
                         </div>
                         <div className='col-12 col-md-10 py-5 row'>
@@ -30,7 +30,7 @@ function Footer() {
                                 <div className="info">
                                     <div className='py-3 row'>
                                         <div className="col-auto">
-                                            <img src="https://ila.edu.vn/front/images/upload/cambridge.jpg" alt=""/>
+                                            <img src="https://ila.edu.vn/front/images/upload/cambridge.jpg" alt="" />
                                         </div>
                                         <div className="col">
                                             <div className="text-uppercase text-logo">
@@ -39,7 +39,7 @@ function Footer() {
                                             </div>
                                         </div>
                                     </div>
-                                    <img className='w-100' src={map} alt=""/>
+                                    <img className='w-100' src={map} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -47,9 +47,9 @@ function Footer() {
                     <div className="row">
                         <div className="col-md col-12">
                             <div className="py-3 copyright">
-                                © Copyright 2021 ILA. All rights reserved. <br/><br/>
+                                © Copyright 2021 ILA. All rights reserved. <br /><br />
                                 Công ty TNHH ILA VIệt Nam, GCN đăng ký đầu tư
-                                số 411043000734 ngày cấp 08/09/2017 nơi cấp Sở Kế Hoạch & Đầu Tư TP. HCM.<br/>
+                                số 411043000734 ngày cấp 08/09/2017 nơi cấp Sở Kế Hoạch & Đầu Tư TP. HCM.<br />
 
                                 Trụ sở chính: 146 Nguyễn Đình Chiểu, Phường: 06, Quận: 03
                             </div>

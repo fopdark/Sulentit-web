@@ -1,34 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Beyond from '../routerPage/beyound';
+import Career from '../routerPage/career';
+import CenterAddresses from '../routerPage/centerAddress';
+import Child from '../routerPage/child';
+import Environments from '../routerPage/enviroment';
+import HomePage from '../routerPage/homepage';
+import Inspiration from '../routerPage/inspiration';
+import LoginParent from '../routerPage/login-parent';
+import LoginStudent from '../routerPage/login-student';
+import Method from '../routerPage/methods';
+import Schedule from '../routerPage/schedule';
+import DropDown from '../smallComponents/dropDownTabBar/dropDownTabBar';
 
-import DropDown from "../dropDownTabBar/dropDownTabBar";
-
-const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
-const carousel1 = process.env.PUBLIC_URL + '/pictures/media_155246671173845.jpg'
-const carousel2 = process.env.PUBLIC_URL + '/pictures/media_155246680133527.jpg'
-const carousel3 = process.env.PUBLIC_URL + '/pictures/media_155246681644305.jpg'
-const carousel4 = process.env.PUBLIC_URL + '/pictures/media_155246741041767.jpg'
-const carouselMobi1 = process.env.PUBLIC_URL + '/pictures/carousel-master-layout.jpg'
-const carouselMobi2 = process.env.PUBLIC_URL + '/pictures/carousel-master-layout-2.jpg'
-const carouselMobi3 = process.env.PUBLIC_URL + '/pictures/carousel-master-layout-3.jpg'
-const singlePicture = process.env.PUBLIC_URL + '/pictures/web_banner_14Dec.jpg'
-
-const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplaySpeed: 3000,
-    autoplay: true,
-};
-
-
-function Header() {
-    const [showSliderBar, changeShowSliderBar] = useState(false)
+function NavTab() {
     useEffect(() => {
         let a: Element | null = document.querySelector('.icon-ila')
         a?.classList.remove('square-transition');
@@ -38,13 +23,33 @@ function Header() {
                     a?.classList.add('fadeInDown');
                     return;
                 }
-
                 a?.classList.remove('fadeInDown');
             });
         });
         observer.observe(document.querySelector('.group-icon') as Element);
     }, [])
 
+    const [showSliderBar, changeShowSliderBar] = useState(false)
+    const lists1: Array<Object> =
+        [
+            { text: 'Phương pháp học tư duy thế kỷ 21', link: '/methods' },
+            { text: 'Môi trường học thế kỷ 21', link: '/environment' },
+            { text: 'Nguồn cảm hứng tư duy thế kỷ 21', link: '/inspiration' }
+        ];
+    const lists2: Array<Object> =
+        [
+            { text: 'Tiếng Anh Trẻ em & Thanh Thiếu Niên', link: '/child' },
+            { text: 'Tiếng Anh Người lớn', link: '/child' },
+            { text: 'Tiếng Anh Dành cho Doanh nghiệp', link: '/child' },
+            { text: 'ILA Maths', link: '/child' },
+            { text: 'ILA Du học', link: '/child' },
+            { text: 'Du học hè 2020', link: '/child' }
+        ]
+    const lists3: Array<Object> =
+        [
+            { text: 'Tuyển dụng Giáo viên nước ngoài và các vị trí Quản lý giáo vụ' },
+            { text: 'Tuyển dụng nhân viên', link: '/career' }
+        ]
     function fClickSliderBarShow() {
         changeShowSliderBar(true)
     }
@@ -52,49 +57,50 @@ function Header() {
     function fClickSliderBarHide() {
         changeShowSliderBar(false)
     }
-
     return (
-        <div className='group-header'>
-            <section className="position-relative header">
+        <Router>
+            <div className="group-header">
                 <div className='w-100 group-navTab'>
                     <div className="px-4 row">
                         <div className="d-none po d-lg-block px-5 col-auto">
                             <div className="position-relative group-icon">
                                 <div className="position-absolute icon-ila">
-                                    <svg
-                                        width="130px"
-                                        height="169px"
-                                        viewBox="0 0 130 169"
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                                        className="big"
-                                    >
-                                        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                                            <g>
-                                                <path
-                                                    d="M37.0746725,62.0483846 C40.7586162,62.0483846 43.7467852,65.0370113 43.7467852,68.7195818 C43.7467852,72.4012367 40.7586162,75.3944409 37.0746725,75.3944409 C33.3925599,75.3944409 30.4007289,72.4012367 30.4007289,68.7195818 C30.4007289,65.0370113 33.3925599,62.0483846 37.0746725,62.0483846"
-                                                    fill="#EC102C"
-                                                    className="dot"
-                                                ></path>
-                                                <polygon
-                                                    fill="#FEFEFE"
-                                                    points="32.2715845 120.061205 41.8069014 120.061205 41.8069014 81.556029 32.2715845 81.556029"
-                                                    className="path"
-                                                ></polygon>
-                                                <polygon
-                                                    fill="#FEFEFE"
-                                                    points="51.3394718 120.061205 60.8715845 120.061205 60.8715845 62.0482473 51.3394718 62.0482473"
-                                                    className="path"
-                                                ></polygon>
-                                                <path
-                                                    d="M90.8609366,100.379388 L90.8609366,105.602275 C90.8632254,106.206501 90.7890704,106.860621 90.6160423,107.362311 C90.1619577,108.69893 89.2395986,110.062557 87.8997746,111.076466 C86.5626972,112.085339 84.8241761,112.758226 82.6109718,112.762346 C81.1544225,112.758226 79.9024859,112.331606 79.0341408,111.532839 C78.1657958,110.729494 77.5675211,109.529282 77.553331,107.552275 C77.5624859,106.058191 77.9529437,104.971501 78.6088944,104.076606 C79.5843521,102.745022 81.3292817,101.780092 83.5713239,101.188226 C85.736007,100.611466 88.3122042,100.392663 90.8609366,100.379388 L90.8609366,100.379388 Z M100.767486,118.108367 C100.392592,115.640656 100.236042,112.492733 100.236042,109.266994 L100.236042,95.1592473 C100.230092,91.2226275 99.5297394,87.0800219 97.1206197,83.8162895 C95.9199507,82.1853388 94.2844225,80.798367 92.1851972,79.8549515 C90.0850563,78.9069585 87.5312887,78.3855853 84.4822394,78.389705 C79.4795282,78.397029 74.6882958,79.7574515 71.3009718,81.8667473 L70.4042465,82.4242825 L72.8628028,89.6864304 L74.3184366,88.7027332 C76.6877324,87.0951275 80.1331901,86.1201275 83.4655845,86.128367 L83.4834366,86.128367 L83.6285423,86.128367 C85.3560775,86.128367 86.6052676,86.4483318 87.5312887,86.9106557 C88.9100211,87.6146698 89.6547746,88.6532966 90.127169,89.8718177 C90.5103028,90.8861839 90.6595282,92.0049163 90.6947746,92.9730501 C83.8386479,93.0842825 78.365831,94.3339304 74.4360775,96.790198 C72.3794225,98.0760078 70.7557958,99.711536 69.6608662,101.669318 C68.5714296,103.623895 68.0221338,105.872804 68.0221338,108.331818 C68.0221338,111.375832 69.1083662,114.417099 71.2968521,116.714529 C73.4720634,119.012416 76.7440352,120.501923 80.8605493,120.501923 L80.895338,120.501923 C85.4343521,120.495515 89.1764296,118.768895 91.6954085,116.429353 L92.1160775,119.645937 L101.000021,119.645937 L100.767486,118.108367 Z"
-                                                    fill="#FEFEFE"
-                                                    className="path"
-                                                ></path>
+                                    <Link to="/">
+                                        <svg
+                                            width="130px"
+                                            height="169px"
+                                            viewBox="0 0 130 169"
+                                            version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                                            className="big"
+                                        >
+                                            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                                                <g>
+                                                    <path
+                                                        d="M37.0746725,62.0483846 C40.7586162,62.0483846 43.7467852,65.0370113 43.7467852,68.7195818 C43.7467852,72.4012367 40.7586162,75.3944409 37.0746725,75.3944409 C33.3925599,75.3944409 30.4007289,72.4012367 30.4007289,68.7195818 C30.4007289,65.0370113 33.3925599,62.0483846 37.0746725,62.0483846"
+                                                        fill="#EC102C"
+                                                        className="dot"
+                                                    ></path>
+                                                    <polygon
+                                                        fill="#FEFEFE"
+                                                        points="32.2715845 120.061205 41.8069014 120.061205 41.8069014 81.556029 32.2715845 81.556029"
+                                                        className="path"
+                                                    ></polygon>
+                                                    <polygon
+                                                        fill="#FEFEFE"
+                                                        points="51.3394718 120.061205 60.8715845 120.061205 60.8715845 62.0482473 51.3394718 62.0482473"
+                                                        className="path"
+                                                    ></polygon>
+                                                    <path
+                                                        d="M90.8609366,100.379388 L90.8609366,105.602275 C90.8632254,106.206501 90.7890704,106.860621 90.6160423,107.362311 C90.1619577,108.69893 89.2395986,110.062557 87.8997746,111.076466 C86.5626972,112.085339 84.8241761,112.758226 82.6109718,112.762346 C81.1544225,112.758226 79.9024859,112.331606 79.0341408,111.532839 C78.1657958,110.729494 77.5675211,109.529282 77.553331,107.552275 C77.5624859,106.058191 77.9529437,104.971501 78.6088944,104.076606 C79.5843521,102.745022 81.3292817,101.780092 83.5713239,101.188226 C85.736007,100.611466 88.3122042,100.392663 90.8609366,100.379388 L90.8609366,100.379388 Z M100.767486,118.108367 C100.392592,115.640656 100.236042,112.492733 100.236042,109.266994 L100.236042,95.1592473 C100.230092,91.2226275 99.5297394,87.0800219 97.1206197,83.8162895 C95.9199507,82.1853388 94.2844225,80.798367 92.1851972,79.8549515 C90.0850563,78.9069585 87.5312887,78.3855853 84.4822394,78.389705 C79.4795282,78.397029 74.6882958,79.7574515 71.3009718,81.8667473 L70.4042465,82.4242825 L72.8628028,89.6864304 L74.3184366,88.7027332 C76.6877324,87.0951275 80.1331901,86.1201275 83.4655845,86.128367 L83.4834366,86.128367 L83.6285423,86.128367 C85.3560775,86.128367 86.6052676,86.4483318 87.5312887,86.9106557 C88.9100211,87.6146698 89.6547746,88.6532966 90.127169,89.8718177 C90.5103028,90.8861839 90.6595282,92.0049163 90.6947746,92.9730501 C83.8386479,93.0842825 78.365831,94.3339304 74.4360775,96.790198 C72.3794225,98.0760078 70.7557958,99.711536 69.6608662,101.669318 C68.5714296,103.623895 68.0221338,105.872804 68.0221338,108.331818 C68.0221338,111.375832 69.1083662,114.417099 71.2968521,116.714529 C73.4720634,119.012416 76.7440352,120.501923 80.8605493,120.501923 L80.895338,120.501923 C85.4343521,120.495515 89.1764296,118.768895 91.6954085,116.429353 L92.1160775,119.645937 L101.000021,119.645937 L100.767486,118.108367 Z"
+                                                        fill="#FEFEFE"
+                                                        className="path"
+                                                    ></path>
+                                                </g>
                                             </g>
-                                        </g>
-                                    </svg>
+                                        </svg>
+                                    </Link>
                                 </div>
                                 <div className='background-icon'>
                                     <svg
@@ -107,11 +113,11 @@ function Header() {
                                     >
                                         <title>logo</title>
                                         <desc>Created with Sketch.</desc>
-                                        <defs/>
+                                        <defs />
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g>
                                                 <g>
-                                                    <polygon fill="#2B368C" points="0 169 130 169 130 0 0 0"/>
+                                                    <polygon fill="#2B368C" points="0 169 130 169 130 0 0 0" />
                                                     <path
                                                         d="M29.0531232,138.095043 L30.582912,138.095043 C30.6007641,138.515712 30.6090035,138.79036 30.6090035,138.911205 C30.6090035,139.576311 30.4730528,140.099973 30.2038979,140.485853 C29.835412,141.018212 29.250412,141.287825 28.4479824,141.287825 C27.7750951,141.287825 27.2482289,141.038811 26.8632641,140.543071 C26.5432993,140.150782 26.3862923,139.570818 26.3862923,138.809128 L26.3862923,134.726029 C26.3862923,133.890184 26.5657289,133.276804 26.9181937,132.870782 C27.2738627,132.472085 27.8121725,132.268388 28.5349542,132.268388 C29.1657289,132.268388 29.6632993,132.464304 30.0276655,132.861628 C30.3979824,133.248423 30.582912,133.789022 30.582912,134.458247 L30.582912,137.039022 L27.9147077,137.039022 L27.9147077,138.973916 C27.9147077,139.576311 28.1014683,139.877966 28.4740739,139.877966 C28.6992852,139.877966 28.8572077,139.785959 28.9528768,139.603318 C29.0261162,139.468282 29.0581585,139.205078 29.0531232,138.836135 L29.0531232,138.445677 L29.0531232,138.095043 Z M27.9147077,135.815466 L29.0531232,135.815466 L29.0531232,134.331451 C29.0531232,133.89705 28.8654472,133.682367 28.4868908,133.682367 C28.107419,133.682367 27.9147077,133.89705 27.9147077,134.331451 L27.9147077,135.815466 Z"
                                                         fill="#FEFEFE"
@@ -184,73 +190,80 @@ function Header() {
                             </div>
                         </div>
                         <div className='d-flex align-items-center d-lg-none col-auto'>
-                            <img src="https://m.ila.edu.vn/front/mobile/images/logo.svg" alt=""/>
+                            <img src="https://m.ila.edu.vn/front/mobile/images/logo.svg" alt="" />
                         </div>
                         <div className="col d-flex justify-content-end">
                             <div className="d-flex justify-content-end px-md-5 group-tab">
                                 <div className='position-relative group-tab2'>
-                                    <div
-                                        className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">Beyond
-                                        english
-                                    </div>
+                                    <Link to="/beyound">
+                                        <div
+                                            className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                                            Beyond english
+                                        </div>
+                                    </Link>
                                     <div className='position-absolute drop-down-cover'>
                                         <DropDown
-                                            lists={['Phương pháp học tư duy thế kỷ 21', 'Môi trường học thế kỷ 21', 'Nguồn cảm hứng tư duy thế kỷ 21']}></DropDown>
+                                            lists={lists1}></DropDown>
                                     </div>
 
                                 </div>
                                 <div className='position-relative group-tab2'>
+
                                     <div
                                         className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">các
                                         khóa học
                                     </div>
+
                                     <div className='position-absolute drop-down-cover'>
                                         <DropDown
-                                            lists={['Tiếng Anh Trẻ em & Thanh Thiếu Niên', 'Tiếng Anh Người lớn', 'Tiếng Anh Dành cho Doanh nghiệp', 'ILA Maths', 'ILA Du học', 'Du học hè 2020']}></DropDown>
+                                            lists={lists2}></DropDown>
                                     </div>
                                 </div>
-
-                                <div
-                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">trung
-                                    tâm đào tạo
-                                </div>
-                                <div
-                                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">lịch
-                                    học
-                                </div>
+                                <Link to="/centerAddress">
+                                    <div
+                                        className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                                        trung tâm đào tạo
+                                    </div>
+                                </Link>
+                                <Link to="/schedule">
+                                    <div
+                                        className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                                        lịch học
+                                    </div>
+                                </Link>
                                 <div className='position-relative group-tab2'>
                                     <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">cơ
                                         hội nghề nghiệp
                                     </div>
                                     <div className='position-absolute drop-down-cover'>
                                         <DropDown
-                                            lists={['Tuyển dụng Giáo viên nước ngoài và các vị trí Quản lý giáo vụ', 'Tuyển dụng nhân viên']}></DropDown>
+                                            lists={lists3}></DropDown>
                                     </div>
                                 </div>
                                 <div
                                     className="mr-3 d-none d-lg-block my-2 py-4 font-weight-bold text-uppercase language">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                         width="21" height="15" viewBox="0 0 21 15">
+                                        width="21" height="15" viewBox="0 0 21 15">
                                         <title>79F01A6E-D065-4BAC-A881-D489E5A44986</title>
                                         <defs>
-                                            <path id="a" d="M0 0h21v15H0z"/>
+                                            <path id="a" d="M0 0h21v15H0z" />
                                         </defs>
                                         <g fill="none" fillRule="evenodd">
                                             <mask id="b" fill="#fff">
-                                                <use xlinkHref="#a"/>
+                                                <use xlinkHref="#a" />
                                             </mask>
-                                            <use fill="#22438B" xlinkHref="#a"/>
+                                            <use fill="#22438B" xlinkHref="#a" />
                                             <path fill="#FFF" mask="url(#b)"
-                                                  d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z"/>
+                                                d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z" />
                                             <path fill="#C7152A" mask="url(#b)"
-                                                  d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z"/>
+                                                d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z" />
                                             <path
                                                 d="M21.476-.418v2S6.666 11.907 1.434 15.54c-.064.044-1.998.003-1.998.003l-.156-1.904L19.476-.418h2z"
-                                                fill="#FFF" mask="url(#b)"/>
+                                                fill="#FFF" mask="url(#b)" />
                                             <path fill="#C7152A" mask="url(#b)"
-                                                  d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z"/>
-                                            <path fill="#FFF" mask="url(#b)" d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z"/>
-                                            <path fill="#C7152A" mask="url(#b)" d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z"/>
+                                                d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z" />
+                                            <path fill="#FFF" mask="url(#b)" d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z" />
+                                            <path fill="#C7152A" mask="url(#b)" d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z" />
                                         </g>
                                     </svg>
                                 </div>
@@ -262,27 +275,27 @@ function Header() {
                                 <div
                                     className="mr-3 d-block d-lg-none my-2 py-4 font-weight-bold text-uppercase language">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                         width="21" height="15" viewBox="0 0 21 15">
+                                        width="21" height="15" viewBox="0 0 21 15">
                                         <title>79F01A6E-D065-4BAC-A881-D489E5A44986</title>
                                         <defs>
-                                            <path id="a" d="M0 0h21v15H0z"/>
+                                            <path id="a" d="M0 0h21v15H0z" />
                                         </defs>
                                         <g fill="none" fillRule="evenodd">
                                             <mask id="b" fill="#fff">
-                                                <use xlinkHref="#a"/>
+                                                <use xlinkHref="#a" />
                                             </mask>
-                                            <use fill="#22438B" xlinkHref="#a"/>
+                                            <use fill="#22438B" xlinkHref="#a" />
                                             <path fill="#FFF" mask="url(#b)"
-                                                  d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z"/>
+                                                d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z" />
                                             <path fill="#C7152A" mask="url(#b)"
-                                                  d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z"/>
+                                                d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z" />
                                             <path
                                                 d="M21.476-.418v2S6.666 11.907 1.434 15.54c-.064.044-1.998.003-1.998.003l-.156-1.904L19.476-.418h2z"
-                                                fill="#FFF" mask="url(#b)"/>
+                                                fill="#FFF" mask="url(#b)" />
                                             <path fill="#C7152A" mask="url(#b)"
-                                                  d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z"/>
-                                            <path fill="#FFF" mask="url(#b)" d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z"/>
-                                            <path fill="#C7152A" mask="url(#b)" d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z"/>
+                                                d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z" />
+                                            <path fill="#FFF" mask="url(#b)" d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z" />
+                                            <path fill="#C7152A" mask="url(#b)" d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z" />
                                         </g>
                                     </svg>
                                 </div>
@@ -302,13 +315,13 @@ function Header() {
                                         <div className='text-light mb-3 font-18 font-weight-bold text-uppercase'>
                                             đăng nhập vào ila
                                         </div>
-                                        <a href="">
+                                        <a href="/login-parent">
                                             <div
                                                 className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
                                                 tôi là phụ huynh
                                             </div>
                                         </a>
-                                        <a href="">
+                                        <a href="/login-student">
                                             <div
                                                 className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
                                                 tôi là học viên
@@ -316,7 +329,7 @@ function Header() {
                                         </a>
                                     </div>
                                     <div onClick={fClickSliderBarHide}
-                                         className='font-weight-bold position-absolute button-X'>
+                                        className='font-weight-bold position-absolute button-X'>
                                         X
                                     </div>
                                     <a href="">
@@ -368,85 +381,19 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <div className="d-none d-lg-block carousel">
-                    <Slider {...settings}>
-                        <img className='w-100 h-100' src={carousel1} alt=''/>
-                        <img className='w-100 h-100' src={carousel2} alt=''/>
-                        <img className='w-100 h-100' src={carousel3} alt=''/>
-                        <img className='w-100 h-100' src={carousel4} alt=''/>
-                    </Slider>
-                </div>
-                <div className="d-block d-lg-none carousel">
-                    <Slider {...settings}>
-                        <img className='w-100 h-100' src={carouselMobi1} alt=''/>
-                        <img className='w-100 h-100' src={carouselMobi2} alt=''/>
-                        <img className='w-100 h-100' src={carouselMobi3} alt=''/>
-                        {/*<img src={carousel4} alt=''/>*/}
-                    </Slider>
-                </div>
-                <div className="position-relative d-flex justify-content-center container">
-                    <div className="group-dropdown">
-                        <div className="p-2 text-center dropdown_title">Xây dựng lộ trình học dành riêng cho con bạn
-                        </div>
-                        <div className="row p-3 dropdown_content">
-                            <div className='col-auto d-flex'>
-                                <div className='d-none d-lg-block py-1 mr-2'>Con tôi</div>
-                                <div className="d-none d-lg-block dropdown mr-2">
-                                    <div className="btn-group">
-                                        <button type="button"
-                                                className="d-flex justify-content-between align-items-center px-2 py-1 btn btn-info dropdown-toggle"
-                                                data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false">
-                                            chọn
-                                        </button>
-                                        <div className="dropdown-menu">
-                                            <a className="dropdown-item" href="/">A</a>
-                                            <a className="dropdown-item" href="/">B</a>
-                                            <a className="dropdown-item" href="/">C</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='d-none d-lg-block py-1 mr-2'>tuổi. Trình độ hiện nay</div>
-                                <div className="d-none d-lg-block dropdown mr-2">
-                                    <button type="button"
-                                            className="d-flex justify-content-between align-items-center px-2 py-1 btn btn-info dropdown-toggle"
-                                            data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                        chọn
-                                    </button>
-                                    <div className="dropdown-menu">
-                                        <a className="dropdown-item" href="/">A</a>
-                                        <a className="dropdown-item" href="/">B</a>
-                                        <a className="dropdown-item" href="/">C</a>
-                                    </div>
-                                </div>
-                                <div className='d-none d-lg-block py-1 mr-2'>ước mơ đạt được</div>
-                                <div className="d-none d-lg-block dropdown">
-                                    <button type="button"
-                                            className="d-flex justify-content-between align-items-center px-2 py-1 btn btn-info dropdown-toggle"
-                                            data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                        chọn
-                                    </button>
-                                    <div className="dropdown-menu">
-                                        <a className="dropdown-item" href="/">A</a>
-                                        <a className="dropdown-item" href="/">B</a>
-                                        <a className="dropdown-item" href="/">C</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='d-flex w-100 pt-3 justify-content-center col-auto'>
-                                <button className='text-uppercase p-2 px-3 info'>tìm hiểu thêm</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='img'>
-                    <div className='d-flex justify-content-center container'><img src={singlePicture} alt=""/></div>
-                </div>
-            </section>
-        </div>
+            </div>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/beyound" component={Beyond} />
+            <Route path="/methods" component={Method} />
+            <Route path="/environment" component={Environments} />
+            <Route path="/inspiration" component={Inspiration} />
+            <Route path="/career" component={Career} />
+            <Route path="/schedule" component={Schedule} />
+            <Route path="/centerAddress" component={CenterAddresses} />
+            <Route path="/login-parent" component={LoginParent} />
+            <Route path="/login-student" component={LoginStudent} />
+            <Route path="/child" component={Child} />
+        </Router >
     )
 }
-
-export default Header;
+export default NavTab;

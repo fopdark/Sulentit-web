@@ -2,12 +2,12 @@
 
 .App {
   text-align: left;
-  font-size: 12px;
-  overflow: hidden;
+  font-size : 14px;
+  overflow  : hidden;
 }
 
 .App-logo {
-  height: 40vmin;
+  height        : 40vmin;
   pointer-events: none;
 }
 
@@ -19,13 +19,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height      : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  font-size       : calc(10px + 2vmin);
+  color           : white;
 }
 
 .App-link {
@@ -36,67 +36,103 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-  .text-red{
-    color: #CE153F;
-  }
-  .text-blue{
-    color: #45c0f8;
-  }
-  /*.bg-red{*/
-  /*  background-color: #CE153F;*/
-  /*}*/
-  .bg-f4{
-    background-color: #f4f4f4;
-  }
-  .text-62{
-    color: #626262;
-  }
-  .bg-blue{
-    background-color: #45c0f8;
-  }
-  @media screen and (min-width: 992px){
-    .font-36{
-      font-size: 36px;
-    }
-    .font-30{
-      font-size: 30px;
-    }
-    .font-26{
-      font-size: 26px;
-    }
-    .font-20{
-      font-size: 20px;
-    }
-    .font-18{
-      font-size: 18px;
-    }
-    .font-16{
-      font-size: 16px;
-    }
-  }
-  @media screen and (max-width: 991px){
-    .font-36{
-      font-size: 28px;
-    }
-    .font-30{
-      font-size: 26px;
-    }
-    .font-26{
-      font-size: 22px;
-    }
-    .font-20{
-      font-size: 18px;
-    }
-    .font-18{
-      font-size: 16px;
-    }
-    .font-16{
-      font-size: 14px;
-    }
+.bg-dk-blue {
+  background-color: #293593
+}
+
+.text-red {
+  color: #CE153F;
+}
+
+.text-blue {
+  color: #45c0f8;
+}
+
+/*.bg-red{*/
+/*  background-color: #CE153F;*/
+/*}*/
+.bg-f4 {
+  background-color: #f4f4f4;
+}
+
+.bg-f0f2f5 {
+  background-color: #f0f2f5
+}
+
+.text-62 {
+  color: #626262;
+}
+
+.bg-blue {
+  background-color: #45c0f8;
+}
+
+@media screen and (min-width: 992px) {
+  .font-36 {
+    font-size: 36px;
   }
 
+  .font-30 {
+    font-size: 30px;
+  }
+
+  .font-26 {
+    font-size: 26px;
+  }
+
+  .font-20 {
+    font-size: 20px;
+  }
+
+  .font-18 {
+    font-size: 18px;
+  }
+
+  .font-16 {
+    font-size: 16px;
+  }
+
+  .font-12 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .font-36 {
+    font-size: 28px;
+  }
+
+  .font-30 {
+    font-size: 26px;
+  }
+
+  .font-26 {
+    font-size: 22px;
+  }
+
+  .font-20 {
+    font-size: 18px;
+  }
+
+  .font-18 {
+    font-size: 16px;
+  }
+
+  .font-16 {
+    font-size: 14px;
+  }
+
+  .font-12 {
+    font-size: 12px;
+  }
+}
+
+.thought21 .text {
+  line-height: 3em;
+}
