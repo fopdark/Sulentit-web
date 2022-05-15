@@ -1,4 +1,5 @@
 @import "styled";
+@import 'variables';
 
 .App {
   text-align: left;
@@ -11,66 +12,35 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height      : 100vh;
-  display         : flex;
-  flex-direction  : column;
-  align-items     : center;
-  justify-content : center;
-  font-size       : calc(10px + 2vmin);
-  color           : white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .bg-dk-blue {
-  background-color: #293593
+  background-color: $color-blue-400
 }
 
 .text-red {
-  color: #CE153F;
+  color: $color-red-200;
 }
 
 .text-blue {
   color: #45c0f8;
 }
 
-/*.bg-red{*/
-/*  background-color: #CE153F;*/
-/*}*/
+.bg-red{
+ background-color: $color-red-200;
+}
 .bg-f4 {
-  background-color: #f4f4f4;
+  background-color: $color-white-200;
 }
 
 .bg-f0f2f5 {
-  background-color: #f0f2f5
+  background-color: $color-white-300
 }
 
 .text-62 {
-  color: #626262;
+  color: $color-gray-400;
 }
 
 .bg-blue {
-  background-color: #45c0f8;
+  background-color: $color-blue-100;
 }
 
 @media screen and (min-width: 992px) {
