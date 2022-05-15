@@ -1,5 +1,4 @@
 import React from "react";
-import { StyledProgram } from "./styled";
 
 const picture1 = process.env.PUBLIC_URL + '/pictures/media_149268653336845.jpg'
 const picture2 = process.env.PUBLIC_URL + '/pictures/media_149268565791175.jpg'
@@ -10,7 +9,7 @@ const pathway = process.env.PUBLIC_URL + '/pictures/Ila_Study_pathway-update1008
 
 function Program() {
     return (
-        <StyledProgram>
+        <div>
             <section className="py-5 program">
                 <div className="container">
                     <div className="text-center font-weight-bold program_title">Chương trình đào tạo tiếng anh <br /> và chương trình
@@ -316,7 +315,7 @@ function Program() {
                     <div data-aos='fade-up' className='w-100 d-flex justify-content-center'><img className='w-100' src={pathway} alt="" /></div>
                 </div>
             </section>
-        </StyledProgram>
+        </div>
     )
 }
 

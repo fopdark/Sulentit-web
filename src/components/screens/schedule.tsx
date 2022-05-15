@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../mediumComponents/header/header';
-import FButton from '../smallComponents/button';
-import DropDown from '../smallComponents/dropDown';
+import Header from '../layout/header/header';
+import FButton from '../ui/button';
+import DropDown from '../ui/dropDown';
 
 function Schedule() {
     return (

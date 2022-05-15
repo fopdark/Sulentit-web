@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from '../mediumComponents/footer/footer';
-import Header from '../mediumComponents/header/header';
-import News from '../mediumComponents/news/news';
-import Number from '../mediumComponents/number/number';
-import Thought21 from '../mediumComponents/thought21/thought21';
+import Footer from '../layout/footer/footer';
+import Header from '../layout/header/header';
+import News from '../ui/news/news';
+import Thought21 from '../ui/thought21/thought21';
+import Number from '../ui/number/number';
 
 function Beyond() {
     return (

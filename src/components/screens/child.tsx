@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '../mediumComponents/footer/footer';
-import Header from '../mediumComponents/header/header';
-import FButton from '../smallComponents/button';
+import Footer from '../layout/footer/footer';
+import Header from '../layout/header/header';
+import FButton from '../ui/button';
 
 function Child() {
     return (

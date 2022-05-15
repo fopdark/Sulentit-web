@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from '../mediumComponents/footer/footer';
-import Header from '../mediumComponents/header/header';
-import Address from '../smallComponents/address';
-import DropDown from '../smallComponents/dropDown';
+import Footer from '../layout/footer/footer';
+import Header from '../layout/header/header';
+import Address from '../ui/address';
+import DropDown from '../ui/dropDown';
 
 function CenterAddresses() {
     return (

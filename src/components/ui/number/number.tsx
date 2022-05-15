@@ -1,11 +1,10 @@
 import React from "react";
-import { StyledNumber } from "./styled";
 import CountUp from 'react-countup';
 
 const backgroundImg = process.env.PUBLIC_URL + '/pictures/media_149268683648236.jpg'
 function Number() {
     return (
-        <StyledNumber style={{ backgroundImage: `url(${backgroundImg})` }} className='group-number'>
+        <div style={{ backgroundImage: `url(${backgroundImg})` }} className='group-number'>
             <section className="py-5 number">
                 <div className="container">
                     <div className="text-uppercase font-weight-bold text-center number_title">
@@ -69,7 +68,7 @@ function Number() {
                     </div>
                 </div>
             </section>
-        </StyledNumber>
+        </div>
     )
 }
 

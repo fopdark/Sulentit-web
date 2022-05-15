@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PathStudy from "../../smallComponents/pathStudy/pathStudy";
-import AdsImage from "../../smallComponents/adsImage/adsImage";
-import DropDown from "../../smallComponents/dropDownTabBar/dropDownTabBar";
-import HomePage from '../../routerPage/homepage';
-import Career from '../../routerPage/career';
+import PathStudy from "../../ui/pathStudy/pathStudy";
+import AdsImage from "../../ui/adsImage/adsImage";
+import DropDown from "../../ui/dropDownTabBar/dropDownTabBar";
+import HomePage from '../../screens/homepage';
+import Career from '../../screens/career';
 import NavTab from '../NavTab';
 
 const logo = process.env.PUBLIC_URL + '/pictures/logo.png'

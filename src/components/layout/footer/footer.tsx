@@ -1,12 +1,11 @@
 import React from "react";
-import { StyledFooter } from "./styled";
 
 const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
 const map = process.env.PUBLIC_URL + '/pictures/map-screenshot.png'
 
 function Footer() {
     return (
-        <StyledFooter className='group-footer'>
+        <div className='group-footer'>
             <section className="py-5 footer">
                 <div className="container">
                     <div className="row">
@@ -67,7 +66,7 @@ function Footer() {
                     </div>
                 </div>
             </section>
-        </StyledFooter>
+        </div>
     )
 }
 
