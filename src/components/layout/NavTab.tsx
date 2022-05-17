@@ -1,66 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Beyond from '../screens/beyound';
-import Career from '../screens/career';
-import CenterAddresses from '../screens/centerAddress';
-import Child from '../screens/child';
-import Environments from '../screens/enviroment';
-import HomePage from '../screens/homepage';
-import Inspiration from '../screens/inspiration';
-import LoginParent from '../screens/loginParent';
-import LoginStudent from '../screens/loginStudent';
-import Method from '../screens/methods';
-import Schedule from '../screens/schedule';
-import DropDown from '../ui/dropDownTabBar/dropDownTabBar';
+import Beyond from "../screens/beyound";
+import Career from "../screens/career";
+import CenterAddresses from "../screens/centerAddress";
+import Child from "../screens/child";
+import Environments from "../screens/enviroment";
+import HomePage from "../screens/homepage";
+import Inspiration from "../screens/inspiration";
+import LoginParent from "../screens/loginParent";
+import LoginStudent from "../screens/loginStudent";
+import Method from "../screens/methods";
+import Schedule from "../screens/schedule";
+import DropDown from "../ui/dropDownTabBar/dropDownTabBar";
 
 function NavTab() {
   useEffect(() => {
-    let a: Element | null = document.querySelector('.icon-ila')
-    a?.classList.remove('square-transition');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    let a: Element | null = document.querySelector(".icon-ila");
+    a?.classList.remove("square-transition");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          a?.classList.add('fadeInDown');
+          a?.classList.add("fadeInDown");
           return;
         }
-        a?.classList.remove('fadeInDown');
+        a?.classList.remove("fadeInDown");
       });
     });
-    observer.observe(document.querySelector('.group-icon') as Element);
-  }, [])
+    observer.observe(document.querySelector(".group-icon") as Element);
+  }, []);
 
-  const [showSliderBar, changeShowSliderBar] = useState(false)
-  const lists1: Array<Object> =
-    [
-      { text: 'Phương pháp học tư duy thế kỷ 21', link: '/methods' },
-      { text: 'Môi trường học thế kỷ 21', link: '/environment' },
-      { text: 'Nguồn cảm hứng tư duy thế kỷ 21', link: '/inspiration' }
-    ];
-  const lists2: Array<Object> =
-    [
-      { text: 'Tiếng Anh Trẻ em & Thanh Thiếu Niên', link: '/child' },
-      { text: 'Tiếng Anh Người lớn', link: '/child' },
-      { text: 'Tiếng Anh Dành cho Doanh nghiệp', link: '/child' },
-      { text: 'ILA Maths', link: '/child' },
-      { text: 'ILA Du học', link: '/child' },
-      { text: 'Du học hè 2020', link: '/child' }
-    ]
-  const lists3: Array<Object> =
-    [
-      { text: 'Tuyển dụng Giáo viên nước ngoài và các vị trí Quản lý giáo vụ' },
-      { text: 'Tuyển dụng nhân viên', link: '/career' }
-    ]
+  const [showSliderBar, changeShowSliderBar] = useState(false);
+  const lists1: Array<Object> = [
+    { text: "Phương pháp học tư duy thế kỷ 21", link: "/methods" },
+    { text: "Môi trường học thế kỷ 21", link: "/environment" },
+    { text: "Nguồn cảm hứng tư duy thế kỷ 21", link: "/inspiration" },
+  ];
+  const lists2: Array<Object> = [
+    { text: "Tiếng Anh Trẻ em & Thanh Thiếu Niên", link: "/child" },
+    { text: "Tiếng Anh Người lớn", link: "/child" },
+    { text: "Tiếng Anh Dành cho Doanh nghiệp", link: "/child" },
+    { text: "ILA Maths", link: "/child" },
+    { text: "ILA Du học", link: "/child" },
+    { text: "Du học hè 2020", link: "/child" },
+  ];
+  const lists3: Array<Object> = [
+    { text: "Tuyển dụng Giáo viên nước ngoài và các vị trí Quản lý giáo vụ" },
+    { text: "Tuyển dụng nhân viên", link: "/career" },
+  ];
   function fClickSliderBarShow() {
-    changeShowSliderBar(true)
+    changeShowSliderBar(true);
   }
 
   function fClickSliderBarHide() {
-    changeShowSliderBar(false)
+    changeShowSliderBar(false);
   }
   return (
     <Router>
       <div className="group-header">
-        <div className='w-100 group-navTab'>
+        <div className="w-100 group-navTab">
           <div className="px-4 row">
             <div className="d-none po d-lg-block px-5 col-auto">
               <div className="position-relative group-icon">
@@ -75,7 +72,12 @@ function NavTab() {
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                       className="big"
                     >
-                      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                      <g
+                        stroke="none"
+                        strokeWidth="1"
+                        fill="none"
+                        fillRule="evenodd"
+                      >
                         <g>
                           <path
                             d="M37.0746725,62.0483846 C40.7586162,62.0483846 43.7467852,65.0370113 43.7467852,68.7195818 C43.7467852,72.4012367 40.7586162,75.3944409 37.0746725,75.3944409 C33.3925599,75.3944409 30.4007289,72.4012367 30.4007289,68.7195818 C30.4007289,65.0370113 33.3925599,62.0483846 37.0746725,62.0483846"
@@ -102,7 +104,7 @@ function NavTab() {
                     </svg>
                   </Link>
                 </div>
-                <div className='background-icon'>
+                <div className="background-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -114,10 +116,18 @@ function NavTab() {
                     <title>logo</title>
                     <desc>Created with Sketch.</desc>
                     <defs />
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g
+                      stroke="none"
+                      strokeWidth="1"
+                      fill="none"
+                      fillRule="evenodd"
+                    >
                       <g>
                         <g>
-                          <polygon fill="#2B368C" points="0 169 130 169 130 0 0 0" />
+                          <polygon
+                            fill="#2B368C"
+                            points="0 169 130 169 130 0 0 0"
+                          />
                           <path
                             d="M29.0531232,138.095043 L30.582912,138.095043 C30.6007641,138.515712 30.6090035,138.79036 30.6090035,138.911205 C30.6090035,139.576311 30.4730528,140.099973 30.2038979,140.485853 C29.835412,141.018212 29.250412,141.287825 28.4479824,141.287825 C27.7750951,141.287825 27.2482289,141.038811 26.8632641,140.543071 C26.5432993,140.150782 26.3862923,139.570818 26.3862923,138.809128 L26.3862923,134.726029 C26.3862923,133.890184 26.5657289,133.276804 26.9181937,132.870782 C27.2738627,132.472085 27.8121725,132.268388 28.5349542,132.268388 C29.1657289,132.268388 29.6632993,132.464304 30.0276655,132.861628 C30.3979824,133.248423 30.582912,133.789022 30.582912,134.458247 L30.582912,137.039022 L27.9147077,137.039022 L27.9147077,138.973916 C27.9147077,139.576311 28.1014683,139.877966 28.4740739,139.877966 C28.6992852,139.877966 28.8572077,139.785959 28.9528768,139.603318 C29.0261162,139.468282 29.0581585,139.205078 29.0531232,138.836135 L29.0531232,138.445677 L29.0531232,138.095043 Z M27.9147077,135.815466 L29.0531232,135.815466 L29.0531232,134.331451 C29.0531232,133.89705 28.8654472,133.682367 28.4868908,133.682367 C28.107419,133.682367 27.9147077,133.89705 27.9147077,134.331451 L27.9147077,135.815466 Z"
                             fill="#FEFEFE"
@@ -189,61 +199,59 @@ function NavTab() {
                 </div>
               </div>
             </div>
-            <div className='d-flex align-items-center d-lg-none col-auto'>
-              <img src="https://m.ila.edu.vn/front/mobile/images/logo.svg" alt="" />
+            <div className="d-flex align-items-center d-lg-none col-auto">
+              <img
+                src="https://m.ila.edu.vn/front/mobile/images/logo.svg"
+                alt=""
+              />
             </div>
             <div className="col d-flex justify-content-end">
               <div className="d-flex justify-content-end px-md-5 group-tab">
-                <div className='position-relative group-tab2'>
+                <div className="position-relative group-tab2">
                   <Link to="/beyound">
-                    <div
-                      className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                    <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
                       Beyond english
                     </div>
                   </Link>
-                  <div className='position-absolute drop-down-cover'>
-                    <DropDown
-                      lists={lists1}></DropDown>
+                  <div className="position-absolute drop-down-cover">
+                    <DropDown lists={lists1}></DropDown>
                   </div>
-
                 </div>
-                <div className='position-relative group-tab2'>
-
-                  <div
-                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">các
-                    khóa học
+                <div className="position-relative group-tab2">
+                  <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                    các khóa học
                   </div>
 
-                  <div className='position-absolute drop-down-cover'>
-                    <DropDown
-                      lists={lists2}></DropDown>
+                  <div className="position-absolute drop-down-cover">
+                    <DropDown lists={lists2}></DropDown>
                   </div>
                 </div>
                 <Link to="/centerAddress">
-                  <div
-                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                  <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
                     trung tâm đào tạo
                   </div>
                 </Link>
                 <Link to="/schedule">
-                  <div
-                    className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                  <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
                     lịch học
                   </div>
                 </Link>
-                <div className='position-relative group-tab2'>
-                  <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">cơ
-                    hội nghề nghiệp
+                <div className="position-relative group-tab2">
+                  <div className="d-none d-md-block mr-3 my-2 py-4 font-weight-bold text-uppercase tab">
+                    cơ hội nghề nghiệp
                   </div>
-                  <div className='position-absolute drop-down-cover'>
-                    <DropDown
-                      lists={lists3}></DropDown>
+                  <div className="position-absolute drop-down-cover">
+                    <DropDown lists={lists3}></DropDown>
                   </div>
                 </div>
-                <div
-                  className="mr-3 d-none d-lg-block my-2 py-4 font-weight-bold text-uppercase language">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="21" height="15" viewBox="0 0 21 15">
+                <div className="mr-3 d-none d-lg-block my-2 py-4 font-weight-bold text-uppercase language">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                    width="21"
+                    height="15"
+                    viewBox="0 0 21 15"
+                  >
                     <title>79F01A6E-D065-4BAC-A881-D489E5A44986</title>
                     <defs>
                       <path id="a" d="M0 0h21v15H0z" />
@@ -253,29 +261,52 @@ function NavTab() {
                         <use xlinkHref="#a" />
                       </mask>
                       <use fill="#22438B" xlinkHref="#a" />
-                      <path fill="#FFF" mask="url(#b)"
-                        d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z" />
-                      <path fill="#C7152A" mask="url(#b)"
-                        d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z" />
+                      <path
+                        fill="#FFF"
+                        mask="url(#b)"
+                        d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z"
+                      />
+                      <path
+                        fill="#C7152A"
+                        mask="url(#b)"
+                        d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z"
+                      />
                       <path
                         d="M21.476-.418v2S6.666 11.907 1.434 15.54c-.064.044-1.998.003-1.998.003l-.156-1.904L19.476-.418h2z"
-                        fill="#FFF" mask="url(#b)" />
-                      <path fill="#C7152A" mask="url(#b)"
-                        d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z" />
-                      <path fill="#FFF" mask="url(#b)" d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z" />
-                      <path fill="#C7152A" mask="url(#b)" d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z" />
+                        fill="#FFF"
+                        mask="url(#b)"
+                      />
+                      <path
+                        fill="#C7152A"
+                        mask="url(#b)"
+                        d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z"
+                      />
+                      <path
+                        fill="#FFF"
+                        mask="url(#b)"
+                        d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z"
+                      />
+                      <path
+                        fill="#C7152A"
+                        mask="url(#b)"
+                        d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z"
+                      />
                     </g>
                   </svg>
                 </div>
                 <div className="mr-3 my-2 py-3 font-weight-bold text-uppercase contact">
-                  <div className='px-3 py-2 text-nowrap text-center'>
+                  <div className="px-3 py-2 text-nowrap text-center">
                     liên hệ
                   </div>
                 </div>
-                <div
-                  className="mr-3 d-block d-lg-none my-2 py-4 font-weight-bold text-uppercase language">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="21" height="15" viewBox="0 0 21 15">
+                <div className="mr-3 d-block d-lg-none my-2 py-4 font-weight-bold text-uppercase language">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                    width="21"
+                    height="15"
+                    viewBox="0 0 21 15"
+                  >
                     <title>79F01A6E-D065-4BAC-A881-D489E5A44986</title>
                     <defs>
                       <path id="a" d="M0 0h21v15H0z" />
@@ -285,22 +316,47 @@ function NavTab() {
                         <use xlinkHref="#a" />
                       </mask>
                       <use fill="#22438B" xlinkHref="#a" />
-                      <path fill="#FFF" mask="url(#b)"
-                        d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z" />
-                      <path fill="#C7152A" mask="url(#b)"
-                        d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z" />
+                      <path
+                        fill="#FFF"
+                        mask="url(#b)"
+                        d="M-.386-.334L-.36 1.64l19.587 13.708 2.037-.037-.037-1.963L1.64-.36z"
+                      />
+                      <path
+                        fill="#C7152A"
+                        mask="url(#b)"
+                        d="M-1.61-.135l22.882 16.04 1-1L-.61-1.136z"
+                      />
                       <path
                         d="M21.476-.418v2S6.666 11.907 1.434 15.54c-.064.044-1.998.003-1.998.003l-.156-1.904L19.476-.418h2z"
-                        fill="#FFF" mask="url(#b)" />
-                      <path fill="#C7152A" mask="url(#b)"
-                        d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z" />
-                      <path fill="#FFF" mask="url(#b)" d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z" />
-                      <path fill="#C7152A" mask="url(#b)" d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z" />
+                        fill="#FFF"
+                        mask="url(#b)"
+                      />
+                      <path
+                        fill="#C7152A"
+                        mask="url(#b)"
+                        d="M22.897-.268L-1.134 16.495l-1-1L21.94-1.295z"
+                      />
+                      <path
+                        fill="#FFF"
+                        mask="url(#b)"
+                        d="M8 0h5v5h8v5h-8v5H8v-5H0V5h8z"
+                      />
+                      <path
+                        fill="#C7152A"
+                        mask="url(#b)"
+                        d="M9 0h3v6h9v3h-9v6H9V9H0V6h9z"
+                      />
                     </g>
                   </svg>
                 </div>
-                <div onClick={fClickSliderBarShow} className="d-flex py-4 my-2 navTab">
-                  <a href='#' className='d-flex align-items-center flex-column d-inline'>
+                <div
+                  onClick={fClickSliderBarShow}
+                  className="d-flex py-4 my-2 navTab"
+                >
+                  <a
+                    href="#"
+                    className="d-flex align-items-center flex-column d-inline"
+                  >
                     <div></div>
                     <div></div>
                     <div></div>
@@ -308,72 +364,71 @@ function NavTab() {
                 </div>
               </div>
             </div>
-            <div className={showSliderBar ? 'd-block' : 'd-none'}>
-              <div className='p-4 bg-light position-fixed slider-bar'>
-                <div className='position-relative'>
-                  <div className='m-2 p-2 bg-blue login'>
-                    <div className='text-light mb-3 font-18 font-weight-bold text-uppercase'>
+            <div className={showSliderBar ? "d-block" : "d-none"}>
+              <div className="p-4 bg-light position-fixed slider-bar">
+                <div className="position-relative">
+                  <div className="m-2 p-2 bg-blue login">
+                    <div className="text-light mb-3 font-18 font-weight-bold text-uppercase">
                       đăng nhập vào ila
                     </div>
                     <a href="/login-parent">
-                      <div
-                        className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
+                      <div className="text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form">
                         tôi là phụ huynh
                       </div>
                     </a>
                     <a href="/login-student">
-                      <div
-                        className='text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form'>
+                      <div className="text-dark my-2 py-2 px-5 bg-light text-uppercase font-16 form">
                         tôi là học viên
                       </div>
                     </a>
                   </div>
-                  <div onClick={fClickSliderBarHide}
-                    className='font-weight-bold position-absolute button-X'>
+                  <div
+                    onClick={fClickSliderBarHide}
+                    className="font-weight-bold position-absolute button-X"
+                  >
                     X
                   </div>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       ILA ELITE
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       CÁC GIẢI THƯỞNG
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       TIN TỨC ILA
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       SỰ KIỆN ILA
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       CHUYỆN HAY CỦA ILA
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       GIỚI THIỆU ILA
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       TẠI SAO NÊN CHỌN ILA
                     </div>
                   </a>
                   <a href="">
-                    <div className='text-dark text-nowrap my-2 p-2 bg-light text-uppercase font-16'>
+                    <div className="text-dark text-nowrap my-2 p-2 bg-light text-uppercase font-16">
                       LIÊN HỆ
                     </div>
                   </a>
-                  <button
-                    className='bg-blue border-0 px-5 py-2 text-uppercase text-light font-weight-bold font-16 form'>
+                  <button className="bg-blue border-0 px-5 py-2 text-uppercase text-light font-weight-bold font-16 form">
                     đăng ký
                   </button>
                 </div>
@@ -393,7 +448,7 @@ function NavTab() {
       <Route path="/login-parent" component={LoginParent} />
       <Route path="/login-student" component={LoginStudent} />
       <Route path="/child" component={Child} />
-    </Router >
-  )
+    </Router>
+  );
 }
 export default NavTab;

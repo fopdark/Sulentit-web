@@ -1,0 +1,180 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.group-header {
+  @include screen-lg-down {
+    &__carousel {
+      img {
+        height    : 90vh;
+        object-fit: cover;
+      }
+    }
+
+    .group-dropdown {
+      word-wrap: normal;
+      bottom   : -140px;
+      width    : 90%;
+    }
+
+    .img {
+      padding: 160px 0px;
+    }
+
+    div.navTab div {
+      background-color: $color-blue-100;
+    }
+
+    .layout-picture {
+      max-height: 100vh;
+      filter    : brightness(50%);
+
+      img {
+        height: 100vh
+      }
+    }
+
+    h1.title-beyound {
+      width                : 100%;
+      bottom               : 50%;
+      text-align           : center;
+      font-size            : 30px;
+      color                : $color-white-100;
+      text-decoration      : underline;
+      text-decoration-color: $color-blue-100;
+    }
+  }
+
+  @include screen-lg-up {
+    .img {
+      padding: 70px 0px;
+    }
+
+    .group-dropdown {
+      bottom: -50px;
+      width : 100%;
+    }
+
+    .group-navTab {
+      position: absolute;
+    }
+
+    div.navTab div {
+      background-color: $color-white-100;
+    }
+
+    .layout-picture {
+      max-height: 80vh;
+      overflow  : hidden;
+      filter    : brightness(50%);
+
+      img {
+        width: 100%
+      }
+    }
+
+    h1.title-beyound {
+      bottom               : 50%;
+      text-align           : center;
+      font-size            : 60px;
+      color                : $color-white-100;
+      text-decoration      : underline;
+      text-decoration-color: $color-blue-100;
+    }
+  }
+
+  .group-navTab {
+    top    : 0;
+    z-index: 1;
+  }
+
+  .slider-bar {
+    right  : 0;
+    top    : 0;
+    z-index: 999;
+
+    .button-X {
+      top    : -30px;
+      right  : 0px;
+      border : 2px solid $color-dark-200;
+      padding: 2px 7px;
+      cursor : pointer;
+    }
+  }
+
+  div.group-tab {
+    div.tab {
+      color : $color-white-100;
+      cursor: pointer;
+    }
+
+    div.contact {
+      div {
+        color           : $color-white-100;
+        background-color: $color-blue-100;
+        border-radius   : 50px;
+      }
+    }
+
+    div.navTab {
+      div {
+        padding-top  : 3px;
+        padding-left : 10px;
+        padding-right: 10px;
+        margin       : 2px;
+      }
+    }
+  }
+
+  div.carousel {
+    background-color: $color-dark-200;
+
+    img {
+      opacity: 0.5;
+    }
+  }
+
+  div.group-dropdown {
+    background-color: $color-blue-100;
+    border-radius   : 10px;
+    bottom          : -50px;
+    z-index         : 0;
+    color           : $color-white-100;
+    font-size       : 1.4em;
+
+    div.dropdown_content {
+
+      div.dropdown {
+        button {
+          width: 150px;
+        }
+      }
+
+      button.info {
+        border       : none;
+        border-radius: 20px;
+        padding-left : 0.4em;
+        padding-right: 0.4em;
+        font-size    : 0.7em;
+        color        : $color-blue-100;
+      }
+    }
+  }
+
+  .img {
+    padding         : 70px 0px;
+    background-color: $color-white-300;
+  }
+
+  .slider-bar {
+    width : 360px;
+    height: 100vh;
+  }
+
+  .login {
+    border-radius: 7px;
+  }
+
+  .form {
+    border-radius: 20px;
+  }
+}

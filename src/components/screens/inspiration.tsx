@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 import Header from "../layout/header/header";
 import Number from "../ui/number/number";
 import News from "../ui/news/news";
 import Footer from "../layout/footer/footer";
-import Movie from '../ui/movie';
-import Address from '../ui/address';
-import DropDown from '../ui/dropDown';
+import Movie from "../ui/movie";
 
 function Inspiration() {
   return (
@@ -24,7 +22,7 @@ function Inspiration() {
       <Number></Number>
       <Footer></Footer>
     </div>
-  )
+  );
 }
 
 export default Inspiration;
