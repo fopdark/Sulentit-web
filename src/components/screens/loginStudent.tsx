@@ -1,6 +1,4 @@
-import React from 'react';
-
-const loginBackground = process.env.PUBLIC_URL + '/pictures/Login_Photo.jpg'
+const loginBackground = '/pictures/Login_Photo.jpg'
 function LoginStudent() {
     return (
         <div style={{ backgroundImage: `url(${loginBackground})` }} className="vh-100 login-student" >

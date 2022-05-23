@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PathStudy from "components/ui/pathStudy/pathStudy";
-import AdsImage from "components/ui/adsImage/adsImage";
+import PathStudy from "components/ui/PathStudy/PathStudy";
+import AdsImage from "components/ui/AdsImage/AdsImage";
 
-import "./header.scss";
+import "./Header.scss";
 
 const carousel1 = "/pictures/media_155246671173845.jpg";
 const carousel2 = "/pictures/media_155246680133527.jpg";
@@ -27,7 +26,6 @@ const settings = {
   autoplay: true,
 };
 
-const ABC = () => <h1>abcd</h1>;
 function Header(props: any) {
   return (
     <div className="group-header">

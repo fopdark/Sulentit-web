@@ -1,0 +1,42 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+@include screen-lg-down{
+  .group-dropdown {
+    word-wrap: normal;
+    bottom   : -140px;
+    width    : 90%;
+  }
+}
+@include screen-lg-up {  
+  .group-dropdown {
+    bottom: -50px;
+    width : 100%;
+  }
+}
+
+.group-dropdown {
+  background-color: $color-blue-100;
+  border-radius   : 10px;
+  bottom          : -50px;
+  z-index         : 0;
+  color           : $color-white-100;
+  font-size       : 1.4em;
+
+  &_content {
+
+    div.dropdown {
+      button {
+        width: 150px;
+      }
+    }
+    button.info {
+      border       : none;
+      border-radius: 20px;
+      padding-left : 0.4em;
+      padding-right: 0.4em;
+      font-size    : 0.7em;
+      color        : $color-blue-100;
+    }
+  }
+}

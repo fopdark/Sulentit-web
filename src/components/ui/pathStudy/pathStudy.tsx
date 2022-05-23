@@ -1,5 +1,4 @@
-import React from "react";
-
+import './PathStudy.scss';
 function PathStudy() {
   return (
     <div className="position-relative d-flex justify-content-center container">
@@ -7,7 +6,7 @@ function PathStudy() {
         <div className="p-2 text-center dropdown_title">
           Xây dựng lộ trình học dành riêng cho con bạn
         </div>
-        <div className="p-3 dropdown_content">
+        <div className="p-3 group-dropdown_content">
           <div className="col-12 px-xl-5 flex-nowrap row">
             <div className="d-flex justify-content-center text-center col-auto">
               <div className="d-none d-lg-block py-1 mr-xl-2">Con tôi</div>

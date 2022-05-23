@@ -1,10 +1,9 @@
-import React from "react";
-import Header from "components/layout/header/header";
-import Program from "components/ui/program/program";
-import Video from "components/ui/video/video";
-import Number from "components/ui/number/number";
-import News from "components/layout/footer/footer";
-import Footer from "components/layout/footer/footer";
+import Header from "components/layout/Header/Header";
+import Program from "components/ui/Program/Program";
+import Video from "components/ui/Video/Video";
+import Number from "components/ui/Number/Number";
+import News from "components/layout/Footer/Footer";
+import Footer from "components/layout/Footer/Footer";
 
 function HomePage() {
   return (

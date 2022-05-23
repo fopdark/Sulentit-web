@@ -1,0 +1,54 @@
+.program {
+  .pathway {
+    font-size: 2em;
+  }
+
+  &_title {
+    font-size: 2em;
+  }
+
+  .class-fade-up:hover .group-content-img {
+    display           : flex;
+    transition        : all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+  }
+
+  .group-content-img {
+    $width          : 30px;
+    top             : 0;
+    color           : #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width           : Calc(100% - #{30px});
+    height          : 100%;
+    &__link {
+      margin       : 6px 0px;
+      border       : 2px solid #fff;
+      border-radius: 15px;
+    }
+
+    &__title {
+      font-size     : 1.3em;
+      text-transform: uppercase;
+      font-weight   : bold;
+      margin        : 8px 0px;
+    }
+
+    &__content {
+      margin: 10px 0px;
+    }
+
+
+
+    button.img-button {
+      display         : inline;
+      margin          : 8px 0px;
+      border          : none;
+      background-color: #45c0f8;
+      padding         : 0.6em 0.8em;
+      border-radius   : 15px;
+      text-transform  : uppercase;
+      font-weight     : bold;
+      color           : #fff;
+    }
+  }
+}

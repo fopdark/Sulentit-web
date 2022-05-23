@@ -1,21 +1,14 @@
-import React from 'react'
-import Header from "../layout/header/header";
-import Number from "../ui/number/number";
-import News from "../ui/news/news";
-import Footer from "../layout/footer/footer";
-import Thought21 from '../ui/thought21/thought21';
-import NecessarySkill from '../ui/necessarySkill/necessarySkill';
-import ModernTechnology from '../ui/modernTechnology';
-import BYOD from '../ui/programBYOD';
+import Header from "components/layout/Header/Header";
+import Number from "components/ui/Number/Number";
+import News from "components/ui/News/News";
+import Footer from "components/layout/Footer/Footer";
+import ModernTechnology from 'components/ui/ModernTechnology';
 
 function Environments() {
     return (
         <div className="enviroment">
             <Header title="môi trường học thế kỷ 21"></Header>
-            {/* <Thought21></Thought21> */}
             <ModernTechnology></ModernTechnology>
-            {/* <NecessarySkill></NecessarySkill> */}
-            {/* <BYOD></BYOD> */}
             <News></News>
             <Number></Number>
             <Footer></Footer>

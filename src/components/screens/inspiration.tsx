@@ -1,22 +1,13 @@
-import React from "react";
-import Header from "../layout/header/header";
-import Number from "../ui/number/number";
-import News from "../ui/news/news";
-import Footer from "../layout/footer/footer";
-import Movie from "../ui/movie";
+import Header from "components/layout/Header/Header";
+import Number from "components/ui/Number/Number";
+import News from "components/ui/News/News";
+import Footer from "components/layout/Footer/Footer";
+import Movie from "components/ui/Movie";
 
 function Inspiration() {
   return (
     <div>
       <Header title="nguồn cảm hứng tư duy thế kỷ 21"></Header>
-      {/* <Thought21></Thought21> */}
-      {/* <ModernTechnology></ModernTechnology> */}
-      {/* <NecessarySkill></NecessarySkill> */}
-      {/* <BYOD></BYOD> */}
-      {/* <Address></Address> */}
-      {/* <DropDown title="chọn thành phố"
-				lists={['Hà Nội', 'Hồ Chí Minh', 'Đà Nẵng']}>
-			</DropDown> */}
       <Movie></Movie>
       <News></News>
       <Number></Number>

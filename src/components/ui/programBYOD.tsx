@@ -1,5 +1,4 @@
-import React from 'react';
-const BYODLayout = process.env.PUBLIC_URL + '/pictures/enviroment-layout.jpg'
+const BYODLayout = '/pictures/enviroment-layout.jpg'
 
 function BYOD() {
     return (

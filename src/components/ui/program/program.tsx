@@ -1,11 +1,11 @@
-import React from "react";
+import './Program.scss';
 
-const picture1 = process.env.PUBLIC_URL + '/pictures/media_149268653336845.jpg'
-const picture2 = process.env.PUBLIC_URL + '/pictures/media_149268565791175.jpg'
-const picture3 = process.env.PUBLIC_URL + '/pictures/media_149268631320236.jpg'
-const picture4 = process.env.PUBLIC_URL + '/pictures/media_149268636724154.jpg'
-const picture5 = process.env.PUBLIC_URL + '/pictures/media_149268642337324.jpg'
-const pathway = process.env.PUBLIC_URL + '/pictures/Ila_Study_pathway-update1008.png'
+const picture1 =  '/pictures/media_149268653336845.jpg'
+const picture2 =  '/pictures/media_149268565791175.jpg'
+const picture3 =  '/pictures/media_149268631320236.jpg'
+const picture4 =  '/pictures/media_149268636724154.jpg'
+const picture5 =  '/pictures/media_149268642337324.jpg'
+const pathway =  '/pictures/Ila_Study_pathway-update1008.png'
 
 function Program() {
     return (
@@ -19,14 +19,14 @@ function Program() {
                         bạn
                         trở thành thế hệ Việt Nam ưu việt
                     </div>
-                    <div className="group-image"></div>
                     <div className="p-2 row">
-                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture1} alt="" />
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class-fade-up">
+                            <img className='w-100 image' src={picture1} alt="" />
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
-                                    <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
+                                    <div className="group-content-img__title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content d-none d-lg-block">
+                                    <div className="group-content-img__content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
@@ -34,42 +34,42 @@ function Program() {
                                 <div className="row d-none d-lg-flex">
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
@@ -78,12 +78,12 @@ function Program() {
                                 <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture2} alt="" />
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class-fade-up"><img className='w-100 image' src={picture2} alt="" />
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
-                                    <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
+                                    <div className="group-content-img__title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content d-none d-lg-block">
+                                    <div className="group-content-img__content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
@@ -91,42 +91,42 @@ function Program() {
                                 <div className="row d-none d-lg-flex">
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
@@ -135,12 +135,12 @@ function Program() {
                                 <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture3} alt="" />
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class-fade-up"><img className='w-100 image' src={picture3} alt="" />
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
-                                    <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
+                                    <div className="group-content-img__title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content d-none d-lg-block">
+                                    <div className="group-content-img__content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
@@ -148,42 +148,42 @@ function Program() {
                                 <div className="row d-none d-lg-flex">
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
@@ -194,12 +194,12 @@ function Program() {
                         </div>
                     </div>
                     <div className="p-2 row">
-                        <div data-aos='fade-up' className="position-relative my-2 col-lg-8 col-12 class"><img className='w-100 image' src={picture4} alt="" />
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-8 col-12 class-fade-up"><img className='w-100 image' src={picture4} alt="" />
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
-                                    <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
+                                    <div className="group-content-img__title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content d-none d-lg-block">
+                                    <div className="group-content-img__content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
@@ -207,42 +207,42 @@ function Program() {
                                 <div className="row d-none d-lg-flex">
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
@@ -251,12 +251,12 @@ function Program() {
                                 <div><button className="img-button d-none d-lg-block">đăng ký ngay</button></div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class"><img className='w-100 image' src={picture5} alt="" />
+                        <div data-aos='fade-up' className="position-relative my-2 col-lg-4 col-12 class-fade-up"><img className='w-100 image' src={picture5} alt="" />
                             <div className="p-3 position-absolute flex-column justify-content-between group-content-img">
                                 <div>
-                                    <div className="img-title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
+                                    <div className="group-content-img__title">Tiếng Anh Trẻ em & Thanh Thiếu Niên
                                     </div>
-                                    <div className="img-content d-none d-lg-block">
+                                    <div className="group-content-img__content d-none d-lg-block">
                                         Đây là một chương trình học tiếng Anh năng động được thiết
                                         kế đặc biệt cho học sinh từ 3 đến 16 tuổi
                                     </div>
@@ -264,42 +264,42 @@ function Program() {
                                 <div className="row d-none d-lg-flex">
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>
                                     </div>
                                     <div className="col-6">
                                         <div
-                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 link">
+                                            className="text-center p-1 d-flex justify-content-between align-items-center px-3 group-content-img__link">
                                             <div>JumpStart</div>
                                             <i className='fas fa-angle-right'></i>
                                         </div>

@@ -1,10 +1,9 @@
-import React from 'react';
-const method1 = process.env.PUBLIC_URL + '/pictures/method-1.jpg'
-const method2 = process.env.PUBLIC_URL + '/pictures/method-2.jpg'
-const method3 = process.env.PUBLIC_URL + '/pictures/method-3.jpg'
-const method4 = process.env.PUBLIC_URL + '/pictures/method-4.jpg'
-const method5 = process.env.PUBLIC_URL + '/pictures/method-5.jpg'
-const method6 = process.env.PUBLIC_URL + '/pictures/method-6.jpg'
+const method1 = '/pictures/method-1.jpg'
+const method2 = '/pictures/method-2.jpg'
+const method3 = '/pictures/method-3.jpg'
+const method4 = '/pictures/method-4.jpg'
+const method5 = '/pictures/method-5.jpg'
+const method6 = '/pictures/method-6.jpg'
 
 function NecessarySkill() {
     return (

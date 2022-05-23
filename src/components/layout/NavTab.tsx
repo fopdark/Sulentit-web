@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Beyond from "../screens/beyound";
-import Career from "../screens/career";
-import CenterAddresses from "../screens/centerAddress";
-import Child from "../screens/child";
-import Environments from "../screens/enviroment";
-import HomePage from "../screens/homepage";
-import Inspiration from "../screens/inspiration";
-import LoginParent from "../screens/loginParent";
-import LoginStudent from "../screens/loginStudent";
-import Method from "../screens/methods";
-import Schedule from "../screens/schedule";
-import DropDown from "../ui/dropDownTabBar/dropDownTabBar";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Beyond from "components/screens/Beyound";
+import Career from "components/screens/Career";
+import CenterAddresses from "components/screens/CenterAddress";
+import Child from "components/screens/Child";
+import Environments from "components/screens/Enviroment";
+import HomePage from "components/screens/Homepage";
+import Inspiration from "components/screens/Inspiration";
+import LoginParent from "components/screens/LoginParent";
+import LoginStudent from "components/screens/LoginStudent";
+import Method from "components/screens/Methods";
+import Schedule from "components/screens/Schedule";
+import DropDown from "components/ui/DropDownTabBar/DropDownTabBar";
 
 function NavTab() {
   useEffect(() => {
@@ -354,7 +354,7 @@ function NavTab() {
                   className="d-flex py-4 my-2 navTab"
                 >
                   <a
-                    href="#"
+                    href="check-href"
                     className="d-flex align-items-center flex-column d-inline"
                   >
                     <div></div>
@@ -388,42 +388,42 @@ function NavTab() {
                   >
                     X
                   </div>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       ILA ELITE
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       CÁC GIẢI THƯỞNG
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       TIN TỨC ILA
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       SỰ KIỆN ILA
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       CHUYỆN HAY CỦA ILA
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       GIỚI THIỆU ILA
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark my-2 p-2 bg-light text-uppercase font-16">
                       TẠI SAO NÊN CHỌN ILA
                     </div>
                   </a>
-                  <a href="">
+                  <a href="check-href">
                     <div className="text-dark text-nowrap my-2 p-2 bg-light text-uppercase font-16">
                       LIÊN HỆ
                     </div>

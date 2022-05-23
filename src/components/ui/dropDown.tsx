@@ -1,12 +1,12 @@
-import React, { Component, useEffect } from 'react';
+import { useEffect } from 'react';
 import $ from "jquery";
 
 function DropDown(props: any) {
     let listItem = props.lists.map((list: any) =>
-        <li><a>{list}</a></li>
+        <li><a href='check-href'>{list}</a></li>
     )
     useEffect(() => {
-        var dropdowns = $(".dropdown");
+        let dropdowns = $(".dropdown");
 
         // Onclick on a dropdown, toggle visibility
         dropdowns.find("dt").click(function () {
@@ -16,7 +16,7 @@ function DropDown(props: any) {
 
         // Clic handler for dropdown
         dropdowns.find("dd ul li a").click(function () {
-            var leSpan = $(this).parents(".dropdown").find("dt a span");
+            let leSpan = $(this).parents(".dropdown").find("dt a span");
 
             // Remove selected class
             $(this).parents(".dropdown").find('dd a').each(function () {
@@ -48,7 +48,7 @@ function DropDown(props: any) {
     return (
         <div className="">
             <dl className="dropdown">
-                <dt><a><span>{props.title}</span></a></dt>
+                <dt><a href="check-href" className=""><span>{props.title}</span></a></dt>
                 <dd>
                     <ul>
                         {listItem}

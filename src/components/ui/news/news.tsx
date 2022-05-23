@@ -1,11 +1,9 @@
-import React from "react";
-
-const news1 = process.env.PUBLIC_URL + '/pictures/media_161763751877096-360x234.jpg'
-const news2 = process.env.PUBLIC_URL + '/pictures/media_161763683441475-360x234.png'
-const news3 = process.env.PUBLIC_URL + '/pictures/media_161522161321690-360x234.jpg'
-const news4 = process.env.PUBLIC_URL + '/pictures/media_161363987431574-360x234.png'
-const news5 = process.env.PUBLIC_URL + '/pictures/media_161821095437958-360x234.png'
-const news6 = process.env.PUBLIC_URL + '/pictures/media_161821143849453-360x234.png'
+const news1 = '/pictures/media_161763751877096-360x234.jpg'
+const news2 = '/pictures/media_161763683441475-360x234.png'
+const news3 = '/pictures/media_161522161321690-360x234.jpg'
+const news4 = '/pictures/media_161363987431574-360x234.png'
+const news5 = '/pictures/media_161821095437958-360x234.png'
+const news6 = '/pictures/media_161821143849453-360x234.png'
 
 function News() {
     return (

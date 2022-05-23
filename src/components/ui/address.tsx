@@ -1,5 +1,4 @@
-import React from 'react'
-import FButton from './button'
+import FButton from 'components/ui/Button'
 
 function Address() {
     return (

@@ -1,4 +1,3 @@
-import React from "react";
 import CountUp from 'react-countup';
 
 const backgroundImg = process.env.PUBLIC_URL + '/pictures/media_149268683648236.jpg'

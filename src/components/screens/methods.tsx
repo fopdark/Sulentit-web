@@ -1,10 +1,9 @@
-import React from 'react';
-import Header from "../layout/header/header";
-import Number from "../ui/number/number";
-import News from "../ui/news/news";
-import Footer from "../layout/footer/footer";
-import Thought21 from '../ui/thought21/thought21';
-import NecessarySkill from '../ui/necessarySkill/necessarySkill';
+import Header from "components/layout/Header/Header";
+import Number from "components/ui/Number/Number";
+import News from "components/ui/News/News";
+import Footer from "components/layout/Footer/Footer";
+import Thought21 from 'components/ui/Thought21/Thought21';
+import NecessarySkill from 'components/ui/NecessarySkill/NecessarySkill';
 
 function Method() {
     return (

@@ -1,7 +1,6 @@
-import React from 'react';
-import Header from '../layout/header/header';
-import FButton from '../ui/button';
-import DropDown from '../ui/dropDown';
+import Header from 'components/layout/Header/Header';
+import FButton from 'components/ui/Button';
+import DropDown from 'components/ui/DropDown';
 
 function Schedule() {
     return (

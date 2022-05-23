@@ -1,4 +1,3 @@
-import React from "react";
 const singlePicture = "/pictures/web_banner_14Dec.jpg";
 
 function AdsImage() {

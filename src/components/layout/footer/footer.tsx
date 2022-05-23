@@ -1,7 +1,6 @@
-import React from "react";
 
-const logo = process.env.PUBLIC_URL + '/pictures/logo.png'
-const map = process.env.PUBLIC_URL + '/pictures/map-screenshot.png'
+const logo =  '/pictures/logo.png'
+const map =  '/pictures/map-screenshot.png'
 
 function Footer() {
     return (

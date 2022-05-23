@@ -1,4 +1,4 @@
-import React from 'react'
+
 function FButton(props: any) {
     let title = 'đăng ký ngay'
     if (props.title) {

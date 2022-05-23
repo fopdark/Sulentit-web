@@ -1,6 +1,5 @@
-import React from 'react';
-import Footer from '../layout/footer/footer';
-import Header from '../layout/header/header';
+import Footer from 'components/layout/Footer/Footer';
+import Header from 'components/layout/Header/Header';
 
 function Career() {
     return (

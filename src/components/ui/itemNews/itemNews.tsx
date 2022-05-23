@@ -1,5 +1,4 @@
-import React from 'react';
-const news1 = process.env.PUBLIC_URL + '/pictures/media_161763751877096-360x234.jpg'
+const news1 = '/pictures/media_161763751877096-360x234.jpg'
 
 function ItemNews() {
     return (

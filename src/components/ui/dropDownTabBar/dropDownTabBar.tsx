@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function DropDown(props: any) {
     let listItem = props.lists.map((list: any) =>
